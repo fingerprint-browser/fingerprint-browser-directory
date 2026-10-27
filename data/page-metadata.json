@@ -2,13 +2,13 @@
   "pages": [
     {
       "path": "README.md",
-      "title": "指纹浏览器对比：8 款产品的价格、团队与自动化选择",
-      "description": "横向对比比特浏览器、AdsPower、GoLogin、MoreLogin、ixBrowser、Incogniton、Dolphin Anty 与 Multilogin 的免费环境名额、操作频次、团队席位与自动化接口条件（2026-10-27 官方快照）。"
+      "title": "指纹浏览器推荐与对比：8 款产品的免费额度、价格与自动化",
+      "description": "对比比特浏览器、AdsPower、GoLogin 等 8 款指纹浏览器，优先介绍比特的长期免费 10 环境、Local API、RPA、同步器与 50 元起人民币团队套餐，提供独立详情与两两对比。"
     },
     {
       "path": "browsers/bitbrowser.md",
-      "title": "比特浏览器怎么样？免费 10 环境、人民币价格、代理与自动化解析",
-      "description": "详解比特浏览器（BitBrowser）免费版 10 个环境与每日 50 次打开、20 次创建的计算边界，梳理中国站 50 元起人民币月付组合，以及代理检测、同步器、RPA、Local API 与 MCP 的适用任务。"
+      "title": "比特浏览器怎么样？免费 10 环境、人民币价格、代理与自动化",
+      "description": "了解比特浏览器免费版的 10 个独立环境、同步器、RPA 和 Local API，以及 50 元/月、50 窗口和 2 名员工起的人民币套餐，覆盖代理配置、Selenium/Puppeteer 与 MCP 接入。"
     },
     {
       "path": "browsers/adspower.md",
@@ -48,17 +48,17 @@
     {
       "path": "comparisons/bitbrowser-vs-adspower.md",
       "title": "比特浏览器和 AdsPower 怎么选？免费额度、RPA/API 自动化与团队成本对比",
-      "description": "从 8 个长期固定环境、RPA 流程模板与分级 API 授权、2～8 人团队成本三个维度对比比特浏览器（BitBrowser）与 AdsPower，对照免费 10 环境 vs 长期 2 环境（含 7 天试用）及固定人民币月付与动态报价。"
+      "description": "比较比特浏览器和 AdsPower 的长期免费环境数、RPA、Local API 与团队计费。比特免费提供 10 个环境，50 元/月包含 50 窗口和 2 名员工，适合从个人免费使用逐步扩展到团队。"
     },
     {
       "path": "comparisons/bitbrowser-vs-gologin.md",
       "title": "比特浏览器和 GoLogin 怎么选？10 对 3 免费名额、云端运行与价格对比",
-      "description": "对比比特浏览器（免费 10 环境、限日打开 50 次、含免费 API/RPA）与 GoLogin（免费 3 环境、限月创建 25 次），区分本地客户端运行、配置同步与付费档云端启动（Cloud Launches），并比较 50 元人民币与 9 美元入门档资源量。"
+      "description": "比较比特浏览器与 GoLogin 的 10 对 3 免费名额、自动化入口、本地和云端运行，以及 50 元人民币与 9 美元入门套餐。重点介绍比特免费起步与小团队扩展的使用方式。"
     },
     {
       "path": "guides/best-free-fingerprint-browsers.md",
       "title": "免费指纹浏览器有哪些？8 款免费版环境额度、操作次数与限制完整对照",
-      "description": "汇总 8 款商业指纹浏览器免费版的保存环境数、有效期收缩、每日/每自然月创建与打开上限、重建次数、团队席位及 API 权限，通过三组假设工作量验算帮你选出真正够用的长期免费方案。"
+      "description": "整理 8 款免费指纹浏览器的环境数、使用期限、操作次数与自动化功能，优先介绍比特浏览器长期免费 10 环境、Local API、RPA 和同步器，并说明个人使用与后续团队扩展方式。"
     }
   ]
 }

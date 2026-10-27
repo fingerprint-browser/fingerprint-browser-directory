@@ -1,17 +1,17 @@
-product,plan,profiles,profile_scope,users_or_staff,create_limit,open_limit,amount,currency,billing_period,conditions,source_url,checked_at,create_limit_kind
-BitBrowser,Free,10,browser,1 member,20/day,50/day,0,,free,免费卡列有 Local API、RPA、窗口同步,https://www.bitbrowser.net/price,2026-10-27,create
-BitBrowser,50-window,50,browser,2 employees,,,50,CNY,month,中国站公开月付组合；不含代理等另购资源,https://www.bitbrowser.cn/price,2026-10-27,
-AdsPower,Free,2,browser,1 super-admin; 0 extra members,,,0,,free,另有7天完整功能试用；与长期免费档分别记录,https://www.adspower.com/pricing,2026-10-27,
-AdsPower,Professional,,browser,,,,,,month,按环境数、成员与付款周期动态配置报价,https://www.adspower.com/pricing,2026-10-27,
-GoLogin,Forever Free,3,browser,no added team members,25/calendar month,,0,,free,不含API、云端启动、Cookie导出、批量创建和环境分享；删除不返还创建次数,https://support.gologin.com/en/articles/14617029-pricing,2026-10-27,create
-GoLogin,Professional 10,10,browser,purchasable,,,9,USD,month,帮助页注明新价格适用于2026年1月起注册账号；入门档；官方帮助列API 300 RPM、1个并发云端会话、100小时总使用量,https://support.gologin.com/en/articles/14617029-pricing,2026-10-27,
-MoreLogin,Free,2,browser,2 users,,,0,,free,价格页列有同步器、Local API、Selenium/Puppeteer,https://www.morelogin.com/pricing,2026-10-27,
-MoreLogin,Pro entry,10,browser,,,,9,USD,month,价格页另列5.4美元折扣展示；用户数量需选择,https://www.morelogin.com/pricing,2026-10-27,
-ixBrowser,Free,unlimited,browser,2 seats,10/day,100/day,0,,free,不限保存数量；API和同步器权限未从图标表格推断,https://ixbrowser.com/pricing,2026-10-27,create
-ixBrowser,Professional,unlimited,browser,20 seats,100/day,1000/day,3.99,USD,month,月付公开标价；另列每月追加创建300次、打开3000次,https://ixbrowser.com/pricing,2026-10-27,create
-Incogniton,Starter,3,browser,,,,0,,free,前2个月为10个环境，之后调整为3个,https://incogniton.com/pricing/,2026-10-27,
-Incogniton,Entrepreneur,50,browser,,,,29.99,USD,month,月付标价；列有API、Selenium/Puppeteer、同步器及Cookie导出,https://incogniton.com/pricing/,2026-10-27,
-Dolphin Anty,Free,3,browser,,20/calendar month,,0,,free,采用套餐帮助页；价格表部分位置仍写5个；账号现存最多3个,https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty,2026-10-27,recreation
-Dolphin Anty,Starter 20,20,browser,extra users selectable,,,10,USD,month,20环境入门月付；更高数量按所选档位；Base 100环境为89美元/月,https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty,2026-10-27,
-Multilogin,Free,5,cloud mobile and browser profiles,,,,0,,free,一次性200MB代理流量；1个云手机配置赠30分钟；不是每月赠送,https://multilogin.com/pricing/,2026-10-27,
-Multilogin,Pro entry,10,cloud mobile and browser profiles,,,,11,USD,month,月付起价；7.08美元/月为85美元年付的折算展示,https://multilogin.com/pricing/,2026-10-27,
+product,plan,profiles,profile_scope,users_or_staff,create_limit,open_limit,amount,currency,billing_period,conditions,official_url,checked_at,create_limit_kind,source_document
+BitBrowser,Free,10,browser,1 member,20/day,50/day,0,,free,免费卡列有 Local API、RPA、窗口同步,https://www.bitbrowser.cn/?code=8467b4,2026-10-27,create,国际站价格卡 /price（免费档）
+BitBrowser,50-window,50,browser,2 employees,,,50,CNY,month,中国站月付组合；代理IP另行配置,https://www.bitbrowser.cn/?code=8467b4,2026-10-27,,中国站价格页 /price（人民币月付）
+AdsPower,Free,2,browser,1 super-admin; 0 extra members,,,0,,free,另有7天完整功能试用；与长期免费档分别记录,https://www.adspower.com/pricing,2026-10-27,,价格页
+AdsPower,Professional,,browser,,,,,,month,按环境数、成员与付款周期动态配置报价,https://www.adspower.com/pricing,2026-10-27,,价格页
+GoLogin,Forever Free,3,browser,no added team members,25/calendar month,,0,,free,不含API、云端启动、Cookie导出、批量创建和环境分享；删除不返还创建次数,https://support.gologin.com/en/articles/14617029-pricing,2026-10-27,create,套餐帮助 Pricing
+GoLogin,Professional 10,10,browser,purchasable,,,9,USD,month,帮助页注明新价格适用于2026年1月起注册账号；入门档；官方帮助列API 300 RPM、1个并发云端会话、100小时总使用量,https://support.gologin.com/en/articles/14617029-pricing,2026-10-27,,套餐帮助 Pricing
+MoreLogin,Free,2,browser,2 users,,,0,,free,价格页列有同步器、Local API、Selenium/Puppeteer,https://www.morelogin.com/pricing,2026-10-27,,价格与功能页
+MoreLogin,Pro entry,10,browser,,,,9,USD,month,价格页另列5.4美元折扣展示；用户数量需选择,https://www.morelogin.com/pricing,2026-10-27,,价格与功能页
+ixBrowser,Free,unlimited,browser,2 seats,10/day,100/day,0,,free,保存数量不限；每日创建10次、打开100次；API和同步器权益按套餐选择,https://ixbrowser.com/pricing,2026-10-27,create,价格表
+ixBrowser,Professional,unlimited,browser,20 seats,100/day,1000/day,3.99,USD,month,月付公开标价；另列每月追加创建300次、打开3000次,https://ixbrowser.com/pricing,2026-10-27,create,价格表
+Incogniton,Starter,3,browser,,,,0,,free,前2个月为10个环境，之后调整为3个,https://incogniton.com/pricing/,2026-10-27,,价格与功能表
+Incogniton,Entrepreneur,50,browser,,,,29.99,USD,month,月付标价；列有API、Selenium/Puppeteer、同步器及Cookie导出,https://incogniton.com/pricing/,2026-10-27,,价格与功能表
+Dolphin Anty,Free,3,browser,,20/calendar month,,0,,free,采用套餐帮助页；价格表部分位置仍写5个；账号现存最多3个,https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty,2026-10-27,recreation,套餐帮助 Plans in Dolphin Anty
+Dolphin Anty,Starter 20,20,browser,extra users selectable,,,10,USD,month,20环境入门月付；更高数量按所选档位；Base 100环境为89美元/月,https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty,2026-10-27,,套餐帮助 Plans in Dolphin Anty
+Multilogin,Free,5,cloud mobile and browser profiles,,,,0,,free,一次性200MB代理流量；1个云手机配置赠30分钟；不是每月赠送,https://multilogin.com/pricing/,2026-10-27,,价格与 FAQ
+Multilogin,Pro entry,10,cloud mobile and browser profiles,,,,11,USD,month,月付起价；7.08美元/月为85美元年付的折算展示,https://multilogin.com/pricing/,2026-10-27,,价格与 FAQ
