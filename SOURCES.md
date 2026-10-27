@@ -14,7 +14,7 @@
 | MoreLogin | [价格与功能页](https://www.morelogin.com/pricing) | 免费 2 环境、2 用户；列有同步器、Local API 和 Selenium/Puppeteer；Pro 9 美元与年付折扣展示分别记录 |
 | ixBrowser | [价格表](https://ixbrowser.com/pricing) | 免费环境不限；2 席位，每日创建 10 次、打开 100 次；付费频次和成员规模分层 |
 | Incogniton | [价格与功能表](https://incogniton.com/pricing/) | 免费前两个月 10 环境，之后 3；付费环境数、月付标价及自动化权限分层 |
-| Dolphin Anty | [套餐帮助](https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty) | 免费 3 环境、每月重建 20 次；Starter 20～60 环境，增加导出与云同步等能力 |
+| Dolphin Anty | [套餐帮助](https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty) | 免费 3 环境、每月重建 20 次；Starter 20～60 环境，其中 20 环境为 10 美元/月起；增加导出与云同步等能力 |
 | Dolphin Anty | [价格页](https://dolphin-anty.com/tarifs/) | Base 100 环境 89 美元/月，Team 300 环境 159 美元/月；免费额度页面内有冲突，见下节 |
 | Multilogin | [价格与 FAQ](https://multilogin.com/pricing/) | Free 为 5 个云手机与浏览器配置名额；代理流量与移动分钟为一次性赠送；Pro 月付与年付分别记录 |
 
@@ -41,51 +41,20 @@
 
 ## 本轮发现的口径差异
 
-**Dolphin 免费额度：** 套餐帮助文档和官网页尾写 3 个，价格页部分功能表仍写 5 个。本轮事实包与 CSV 采用套餐文档的 3 个，并同时保留两个来源；已有账号以其套餐界面显示的配额核对。
+**Dolphin 免费额度：** 套餐帮助文档和官网页尾写 3 个，价格页部分功能表仍写 5 个。详情与 CSV 采用套餐文档的 3 个，并同时保留两个来源；已有账号以其套餐界面显示的配额核对。
 
-**GoLogin 报价与免费权限：** 价格页和帮助页在高级档报价、部分免费功能概括上存在差异。本轮不发布高级档的统一金额；免费 API、云端启动、分享及导出等条件采用列项更具体的套餐帮助页。年付帮助页还有示例数字不一致，正文不据此自行补出一套年付价格。
+**GoLogin 报价与免费权限：** 价格页和帮助页在高级档报价、部分免费功能概括上存在差异。本仓库按明确的月付档位记录金额；免费 API、云端启动、分享及导出等条件采用列项更具体的套餐帮助页。年付帮助页还有示例数字不一致，正文只引用已明确的月付价格。
 
 **Multilogin 的免费资源：** 价格页的 5 个配置覆盖云手机与浏览器；一次性代理流量和移动分钟没有按每月赠送登记。页面对 API 与团队权限的呈现不够一致，自动化任务按对应付费档进一步选择，CSV 不给免费档补上 API 权限。
 
 **动态价格与图标：** 数量选择器未固定的金额，不记为唯一成交价；功能表中只有图标、缺少可识别权限文字的项目，留空而不推断免费包含。
 
+## 云端与计数补充
+
+GoLogin Professional 帮助页列出 API 300 次请求/分钟、1 个并发云端会话、100 小时总使用量；免费创建额度每月 1 日 00:00 UTC 重置，删除不返还次数。ixBrowser 价格页还为付费档列出月追加创建与打开额度，不能与每日额度合为同一数字。
+
 ## 记录范围
 
-本轮完成公开页面与链接核验，没有登录上述产品账号进行并发、稳定性、封号率或客服响应测试。规划中的工作量例子属于套餐数字的计算示例。
+本轮完成公开页面与链接核验，没有登录上述产品账号进行并发、稳定性、封号率或客服响应测试。文中的工作量例子属于套餐数字的计算示例。
 
-[使用说明](START_HERE.md) · [查看套餐 CSV](data/browser-plans.csv) · [结构化事实包](data/product-facts.json)
-
-## 结构与搜索研究来源
-
-- S01：[BitBrowser 国际站价格](https://www.bitbrowser.net/price)，核验快照 2026-10-27。
-- S02：[BitBrowser 中国站价格](https://www.bitbrowser.cn/price)，核验快照 2026-10-27。
-- S03：[BitBrowser 下载](https://www.bitbrowser.cn/download)，核验快照 2026-10-27。
-- S04：[BitBrowser 代理设置](https://www.bitbrowser.cn/proxy-setting)，核验快照 2026-10-27。
-- S05：[BitBrowser Local API](https://www.bitbrowser.cn/local-api)，核验快照 2026-10-27。
-- S06：[BitBrowser MCP 教程](https://www.bitbrowser.cn/news/how-to-configure-bitbrowser-mcp)，核验快照 2026-10-27。
-- S07：[AdsPower 价格](https://www.adspower.com/pricing)，核验快照 2026-10-27。
-- S08：[AdsPower Local API](https://help.adspower.com/docs/api)，核验快照 2026-10-27。
-- S09：[AdsPower RPA](https://help.adspower.com/docs/rpa)，核验快照 2026-10-27。
-- S10：[GoLogin 价格](https://gologin.com/pricing/)，核验快照 2026-10-27。
-- S11：[GoLogin 套餐帮助](https://support.gologin.com/en/articles/14617029-pricing)，核验快照 2026-10-27。
-- S12：[GoLogin 安装与系统](https://support.gologin.com/en/articles/3452486-supported-platforms-installation)，核验快照 2026-10-27。
-- S13：[GoLogin API](https://gologin.com/docs/api-reference/introduction/quickstart)，核验快照 2026-10-27。
-- S14：[MoreLogin 价格](https://www.morelogin.com/pricing)，核验快照 2026-10-27。
-- S15：[MoreLogin 产品](https://www.morelogin.com/)，核验快照 2026-10-27。
-- S16：[ixBrowser 价格](https://ixbrowser.com/pricing)，核验快照 2026-10-27。
-- S17：[ixBrowser 产品](https://ixbrowser.com/en)，核验快照 2026-10-27。
-- S18：[Incogniton 价格](https://incogniton.com/pricing/)，核验快照 2026-10-27。
-- S19：[Dolphin Anty 套餐帮助](https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty)，核验快照 2026-10-27。
-- S20：[Dolphin Anty 价格](https://dolphin-anty.com/tarifs/)，核验快照 2026-10-27。
-- S21：[Dolphin Anty 环境限制](https://docs.dolphin-anty.com/en/working-with-profiles/restrictions-on-working-with-profiles-in-dolphin-anty)，核验快照 2026-10-27。
-- S22：[Dolphin Anty 自动化](https://docs.dolphin-anty.com/en/api/basic-automation-dolphin-anty)，核验快照 2026-10-27。
-- S23：[Multilogin 价格与 FAQ](https://multilogin.com/pricing/)，核验快照 2026-10-27。
-- S24：[Multilogin 系统要求](https://multilogin.com/help/en_US/minimum-system-requirements)，核验快照 2026-10-27。
-
-- [Google 高质量评测建议](https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews)
-- [Google 链接建议](https://developers.google.com/search/docs/crawling-indexing/links-crawlable)
-- [最初参考仓库](https://github.com/pukaranda1/zhiwenliulanqi)
-- [资源型仓库](https://github.com/zhaotoday/fingerprint-browser)
-- [目录型仓库](https://github.com/fingerprint-browser-guide/fingerprint-browser)
-- [厂商比较内容样本](https://www.adspower.net/blog/fingerprint-browser-comparison)
-- [免费目录内容样本](https://fingerbrowser.com/zh/browsers/free)
+[返回总览](README.md) · [查看套餐 CSV](data/browser-plans.csv) · [更新记录](CHANGELOG.md)
