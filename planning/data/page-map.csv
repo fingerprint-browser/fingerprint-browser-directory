@@ -1,0 +1,13 @@
+id,target_path,suggested_h1,primary_query,secondary_queries,search_intent,priority,unique_angle,status,search_volume,keyword_difficulty,google_position
+P00,README.md,指纹浏览器对比：8 款产品的价格、团队与自动化选择,指纹浏览器对比,指纹浏览器推荐; 指纹浏览器哪个好; 多账号浏览器怎么选,跨产品选型,P0,用环境数量、实际操作频次、成员权限、自动化入口缩小选择范围；首页本身可独立完成初筛。,RESEARCHED_NOT_DRAFTED,,,
+P01,browsers/bitbrowser.md,比特浏览器怎么样？免费环境、价格、代理与自动化,比特浏览器怎么样,比特浏览器免费版; 比特浏览器价格; 比特浏览器代理; 比特浏览器 MCP,品牌产品调研,P0,把 10 个免费环境与每日 50 次打开、20 次创建分开；给出代理、API、RPA、MCP 各自能解决的管理任务。,RESEARCHED_NOT_DRAFTED,,,
+P02,browsers/adspower.md,AdsPower 免费版够用吗？环境数量、试用与自动化,AdsPower 免费版,AdsPower 价格; AdsPower RPA; AdsPower Local API,品牌免费档与升级判断,P0,将长期免费 2 环境和 7 天完整试用拆开，说明环境数、额外成员、API 授权与 RPA 流程资产对选择的影响。,RESEARCHED_NOT_DRAFTED,,,
+P03,browsers/gologin.md,GoLogin 免费版有哪些限制？3 个环境、创建次数与云端功能,GoLogin 免费版限制,GoLogin 免费; GoLogin 价格; GoLogin API; GoLogin 云浏览器,免费权益与付费功能判断,P0,把保存 3 个环境和每自然月 25 次创建分别说明，区分云同步、云端启动和 API 的付费边界。,RESEARCHED_NOT_DRAFTED,,,
+P04,browsers/morelogin.md,MoreLogin 免费版适合两个人用吗？环境、用户与自动化,MoreLogin 免费版,MoreLogin 价格; MoreLogin 同步器; MoreLogin 云手机,少量账号与双人协作选型,P1,从免费 2 环境、2 用户的工作量讨论；浏览器与云手机分别核对，不混算资源。,RESEARCHED_NOT_DRAFTED,,,
+P05,browsers/ixbrowser.md,ixBrowser 真的不限环境吗？免费日次数与付费方式,ixBrowser 免费版,ixBrowser 永久免费; ixBrowser 不限环境; ixBrowser 价格,不限环境的真实计数边界,P1,不限保存数量与每日创建 10 个、打开 100 次是两套计数；用可复核的算术区分固定环境复用和每天大量新增。,RESEARCHED_NOT_DRAFTED,,,
+P06,browsers/incogniton.md,Incogniton 免费多久？前两个月额度与自动化套餐,Incogniton 免费版,Incogniton 免费多久; Incogniton 价格; Incogniton API,免费期变化与升级准备,P1,以从 10 个到 3 个环境的额度变化解释长期使用安排，付费档同时看环境数量与自动化功能。,RESEARCHED_NOT_DRAFTED,,,
+P07,browsers/dolphin-anty.md,Dolphin Anty 免费版有几个环境？3 个与 5 个的资料差异,Dolphin Anty 免费版,Dolphin Anty 免费几个环境; Dolphin Anty 价格; Dolphin Anty 免费额度,解决套餐口径冲突,P1,保留官方套餐帮助 3 个与价格表部分位置 5 个的差异，解释重建 20 次与可保存数量无关。,RESEARCHED_NOT_DRAFTED,,,
+P08,browsers/multilogin.md,Multilogin 免费版是什么？配置名额、代理与云手机时长,Multilogin 免费版,Multilogin 价格; Multilogin 免费环境; Multilogin 云手机,组合资源与总费用理解,P1,将 5 个混合配置名额、一次性代理流量、一次性移动时长分开；解释 11 美元月付与 7.08 年付折算。,RESEARCHED_NOT_DRAFTED,,,
+P09,comparisons/bitbrowser-vs-adspower.md,比特浏览器和 AdsPower 怎么选？免费额度、自动化与团队成本,比特浏览器和 AdsPower 哪个好,比特浏览器 AdsPower 对比; BitBrowser vs AdsPower; AdsPower 替代,两个产品之间做选择,P0,围绕长期保留 8 个环境、已有 RPA 流程、团队成员三个实际条件判断；比较同类计费字段，避免把动态价格写成成本倍数。,RESEARCHED_NOT_DRAFTED,,,
+P10,comparisons/bitbrowser-vs-gologin.md,比特浏览器和 GoLogin 怎么选？免费名额、云端运行与价格,比特浏览器和 GoLogin 对比,BitBrowser vs GoLogin; GoLogin 比特浏览器; GoLogin 替代,本地环境与云端使用需求比较,P0,区分本地保存、跨设备同步和云端启动，比较 10 对 3 的免费数量、日打开与月创建及自动化付费条件。,RESEARCHED_NOT_DRAFTED,,,
+P11,guides/best-free-fingerprint-browsers.md,免费指纹浏览器有哪些？8 款免费版额度与限制,免费指纹浏览器哪个好,免费指纹浏览器; 永久免费指纹浏览器; 指纹浏览器免费版限制; 不限环境指纹浏览器,长期免费方案比较,P0,统一比较长期名额、试用时长、创建/打开/重建计数、成员与 API；让读者按实际工作量算出是否够用。,RESEARCHED_NOT_DRAFTED,,,

@@ -1,0 +1,659 @@
+{
+  "title": "指纹浏览器官方事实快照",
+  "checked_at": "2026-10-27",
+  "market": "简体中文内容；面向 Google 可见性",
+  "sources": {
+    "S01": {
+      "id": "S01",
+      "title": "BitBrowser 国际站价格",
+      "url": "https://www.bitbrowser.net/price",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S02": {
+      "id": "S02",
+      "title": "BitBrowser 中国站价格",
+      "url": "https://www.bitbrowser.cn/price",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S03": {
+      "id": "S03",
+      "title": "BitBrowser 下载",
+      "url": "https://www.bitbrowser.cn/download",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S04": {
+      "id": "S04",
+      "title": "BitBrowser 代理设置",
+      "url": "https://www.bitbrowser.cn/proxy-setting",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S05": {
+      "id": "S05",
+      "title": "BitBrowser Local API",
+      "url": "https://www.bitbrowser.cn/local-api",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S06": {
+      "id": "S06",
+      "title": "BitBrowser MCP 教程",
+      "url": "https://www.bitbrowser.cn/news/how-to-configure-bitbrowser-mcp",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S07": {
+      "id": "S07",
+      "title": "AdsPower 价格",
+      "url": "https://www.adspower.com/pricing",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S08": {
+      "id": "S08",
+      "title": "AdsPower Local API",
+      "url": "https://help.adspower.com/docs/api",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S09": {
+      "id": "S09",
+      "title": "AdsPower RPA",
+      "url": "https://help.adspower.com/docs/rpa",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S10": {
+      "id": "S10",
+      "title": "GoLogin 价格",
+      "url": "https://gologin.com/pricing/",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S11": {
+      "id": "S11",
+      "title": "GoLogin 套餐帮助",
+      "url": "https://support.gologin.com/en/articles/14617029-pricing",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S12": {
+      "id": "S12",
+      "title": "GoLogin 安装与系统",
+      "url": "https://support.gologin.com/en/articles/3452486-supported-platforms-installation",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S13": {
+      "id": "S13",
+      "title": "GoLogin API",
+      "url": "https://gologin.com/docs/api-reference/introduction/quickstart",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S14": {
+      "id": "S14",
+      "title": "MoreLogin 价格",
+      "url": "https://www.morelogin.com/pricing",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S15": {
+      "id": "S15",
+      "title": "MoreLogin 产品",
+      "url": "https://www.morelogin.com/",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S16": {
+      "id": "S16",
+      "title": "ixBrowser 价格",
+      "url": "https://ixbrowser.com/pricing",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S17": {
+      "id": "S17",
+      "title": "ixBrowser 产品",
+      "url": "https://ixbrowser.com/en",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S18": {
+      "id": "S18",
+      "title": "Incogniton 价格",
+      "url": "https://incogniton.com/pricing/",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S19": {
+      "id": "S19",
+      "title": "Dolphin Anty 套餐帮助",
+      "url": "https://docs.dolphin-anty.com/en/personal-cabinet/plans-in-dolphin-anty",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S20": {
+      "id": "S20",
+      "title": "Dolphin Anty 价格",
+      "url": "https://dolphin-anty.com/tarifs/",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S21": {
+      "id": "S21",
+      "title": "Dolphin Anty 环境限制",
+      "url": "https://docs.dolphin-anty.com/en/working-with-profiles/restrictions-on-working-with-profiles-in-dolphin-anty",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S22": {
+      "id": "S22",
+      "title": "Dolphin Anty 自动化",
+      "url": "https://docs.dolphin-anty.com/en/api/basic-automation-dolphin-anty",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S23": {
+      "id": "S23",
+      "title": "Multilogin 价格与 FAQ",
+      "url": "https://multilogin.com/pricing/",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    },
+    "S24": {
+      "id": "S24",
+      "title": "Multilogin 系统要求",
+      "url": "https://multilogin.com/help/en_US/minimum-system-requirements",
+      "checked_at": "2026-10-27",
+      "source_type": "official_primary",
+      "verification": "public_page_snapshot"
+    }
+  },
+  "products": {
+    "bitbrowser": {
+      "name": "比特浏览器 BitBrowser",
+      "facts": [
+        {
+          "id": "BIT01",
+          "claim": "免费档可保存 10 个浏览器环境，成员数量上限为 1；每日最多创建 20 个、打开 50 次。",
+          "source_ids": [
+            "S01"
+          ],
+          "scope": "国际站免费价格卡",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "BIT02",
+          "claim": "免费价格卡列有窗口同步、Local API、RPA。",
+          "source_ids": [
+            "S01"
+          ],
+          "scope": "只引用该价格卡列明的功能",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "BIT03",
+          "claim": "中国站公开月付组合为：50 窗口/2 员工 50 元；100/4 为 75 元；200/8 为 125 元。",
+          "source_ids": [
+            "S02"
+          ],
+          "scope": "中国站人民币月付；员工字段沿用官网口径",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "BIT04",
+          "claim": "官方提供代理配置与连接检测、Local API 和 MCP 接入文档；API 文档涉及 Selenium、Puppeteer。",
+          "source_ids": [
+            "S04",
+            "S05",
+            "S06"
+          ],
+          "scope": "功能与文档存在；MCP 接入以教程要求的版本和鉴权配置为准",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "BIT05",
+          "claim": "下载页列出 Windows 10 及以上 64 位和 macOS 12 及以上，含 Intel 与 Apple 芯片入口。",
+          "source_ids": [
+            "S03"
+          ],
+          "scope": "桌面客户端；云手机系统不能算作桌面系统支持",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "封号率、指纹检测通过率、启动速度、CPU/内存占用",
+        "免费无限打开、免费多人协作",
+        "Linux、Android、iOS 原生桌面客户端",
+        "代理 IP 随套餐免费附送",
+        "MCP 自动完成任意平台任务或规避验证"
+      ],
+      "key": "bitbrowser"
+    },
+    "adspower": {
+      "name": "AdsPower",
+      "facts": [
+        {
+          "id": "ADS01",
+          "claim": "长期免费方案为 2 个浏览器环境，0 个额外成员，包含 1 个超级管理员。",
+          "source_ids": [
+            "S07"
+          ],
+          "scope": "公开套餐或功能说明",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "ADS02",
+          "claim": "7 天完整功能试用与长期免费档是两种不同口径。",
+          "source_ids": [
+            "S07"
+          ],
+          "scope": "公开套餐或功能说明",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "ADS03",
+          "claim": "付费报价受环境数量、成员配置和付款周期影响；本轮不登记统一成交价。",
+          "source_ids": [
+            "S07"
+          ],
+          "scope": "动态选择器；不套用其他站点或活动截图的金额",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "ADS04",
+          "claim": "官方 API 文档说明环境配置、启动和关闭等接口；超级管理员及成员授权有各自入口。",
+          "source_ids": [
+            "S08"
+          ],
+          "scope": "接口与授权流程；不据此宣称免费档全部包含",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "ADS05",
+          "claim": "官方 RPA 文档介绍流程编辑、错误处理、分组和模板分享。",
+          "source_ids": [
+            "S09"
+          ],
+          "scope": "功能与文档存在；具体套餐权限另核",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "免费档的 API/RPA/同步器权限结论",
+        "统一月费、与比特相比成本翻倍",
+        "当前用户总量、行业第一、最强指纹",
+        "安全认证覆盖全部产品及其竞品排名",
+        "封号率或个人实测体验"
+      ],
+      "key": "adspower"
+    },
+    "gologin": {
+      "name": "GoLogin",
+      "facts": [
+        {
+          "id": "GO01",
+          "claim": "Forever Free 可同时保存 3 个环境；每自然月最多创建 25 个。删除环境不返还当月创建次数。",
+          "source_ids": [
+            "S11"
+          ],
+          "scope": "按官方套餐帮助的具体列项",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "GO02",
+          "claim": "免费档不包含 API、云端启动、Cookie 导出、批量创建、环境分享及团队等列明功能。",
+          "source_ids": [
+            "S11"
+          ],
+          "scope": "不要把产品有云功能写成免费档拥有云功能",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "GO03",
+          "claim": "Professional 10 入门月付标价 9 美元，含 10 个环境。帮助页注明新定价适用于 2026 年 1 月起注册的账号，旧账号需另核。",
+          "source_ids": [
+            "S10",
+            "S11"
+          ],
+          "scope": "新账号月付入门档；不外推高级档或年付金额",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "GO04",
+          "claim": "官方另有桌面/移动端支持与 API 快速入门文档。",
+          "source_ids": [
+            "S12",
+            "S13"
+          ],
+          "scope": "本轮不扩写全部系统版本或自动化实现细节",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "免费 API、免费云端启动、免费团队协作",
+        "删除后创建次数自动恢复",
+        "没有来源的 2GB 每月免费代理",
+        "帮助页冲突的高级套餐和年付金额",
+        "云同步等于不占用本地资源的云端运行"
+      ],
+      "key": "gologin"
+    },
+    "morelogin": {
+      "name": "MoreLogin",
+      "facts": [
+        {
+          "id": "MORE01",
+          "claim": "免费档列明 2 个环境、2 个用户，为长期免费方案。",
+          "source_ids": [
+            "S14"
+          ],
+          "scope": "2 个用户是价格页总用户口径",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "MORE02",
+          "claim": "免费价格卡列有同步器、Local API、Selenium/Puppeteer。",
+          "source_ids": [
+            "S14"
+          ],
+          "scope": "公开套餐或功能说明",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "MORE03",
+          "claim": "Pro 入门档为 10 个环境、月付 9 美元；页面另有 5.4 美元折扣展示，付款周期需分开。",
+          "source_ids": [
+            "S14"
+          ],
+          "scope": "9 美元月付；不把年付折算写成月付结账价",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "MORE04",
+          "claim": "产品页同时介绍浏览器环境与 Android 云手机；两类资源和费用不能混算。",
+          "source_ids": [
+            "S15"
+          ],
+          "scope": "公开套餐或功能说明",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "2 个用户是额外附加席位",
+        "免费云手机额度与免费浏览器环境等同",
+        "年付折扣价可以逐月支付",
+        "缺少版本与菜单证据的操作步骤",
+        "自动化与同步操作的效率实测"
+      ],
+      "key": "morelogin"
+    },
+    "ixbrowser": {
+      "name": "ixBrowser",
+      "facts": [
+        {
+          "id": "IX01",
+          "claim": "免费档不限保存的环境总数，列明 2 个席位；每日最多创建 10 个、打开 100 次。",
+          "source_ids": [
+            "S16"
+          ],
+          "scope": "环境保存总数与日用量分开",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "IX02",
+          "claim": "Professional 月付 3.99 美元，每日创建 100 个、打开 1000 次，20 个席位。",
+          "source_ids": [
+            "S16"
+          ],
+          "scope": "公开套餐或功能说明",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "IX03",
+          "claim": "Business 月付 9.99 美元，对应每日创建 500 个、打开 5000 次、50 席位；Enterprise 月付 19.99 美元，对应 1500/15000/150 席位。",
+          "source_ids": [
+            "S16"
+          ],
+          "scope": "用量字段按创建/打开/席位顺序",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "IX04",
+          "claim": "本轮未从价格表图标推断免费 API 与同步器权限。",
+          "source_ids": [
+            "S16"
+          ],
+          "scope": "未验证字段，写作时省略正向权限断言",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "免费无限创建、无限打开、无限并发",
+        "免费 API 或免费同步器",
+        "不限环境等于不限设备资源",
+        "删除环境返还日次数",
+        "未提供的客户端操作截图或可用性测试"
+      ],
+      "key": "ixbrowser"
+    },
+    "incogniton": {
+      "name": "Incogniton",
+      "facts": [
+        {
+          "id": "INC01",
+          "claim": "免费 Starter 前 2 个月可用 10 个环境，之后调整为 3 个。",
+          "source_ids": [
+            "S18"
+          ],
+          "scope": "不是永久 10 个",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "INC02",
+          "claim": "Starter Plus 月付标价 19.99 美元，含 10 个环境。",
+          "source_ids": [
+            "S18"
+          ],
+          "scope": "与半年付等折扣分开",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "INC03",
+          "claim": "Entrepreneur 月付标价 29.99 美元，含 50 个环境，功能表列有 API、Selenium/Puppeteer、同步器、Cookie 导出和环境转移等能力。",
+          "source_ids": [
+            "S18"
+          ],
+          "scope": "不能反推免费档包含这些功能",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "INC04",
+          "claim": "Professional 月付标价 79.99 美元，150 个环境，并列 3 个团队席位。",
+          "source_ids": [
+            "S18"
+          ],
+          "scope": "公开套餐或功能说明",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "永久 10 个免费环境",
+        "免费期结束必定删除环境或自动扣费",
+        "19.99 美元档默认包含 Entrepreneur 全部能力",
+        "半年付折扣数是月付成交价",
+        "未核对的系统支持或安装步骤"
+      ],
+      "key": "incogniton"
+    },
+    "dolphin-anty": {
+      "name": "Dolphin Anty",
+      "facts": [
+        {
+          "id": "DOL01",
+          "claim": "最新套餐帮助文档的免费档为 3 个环境；每月重建额度为 20 次。删除动作本身不等于一次重建。",
+          "source_ids": [
+            "S19",
+            "S21"
+          ],
+          "scope": "重建次数不能写成保存环境总数或每日创建次数",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "DOL02",
+          "claim": "价格页部分功能表仍出现 5 个免费环境，套餐帮助和页尾为 3 个；应说明来源与日期差异。",
+          "source_ids": [
+            "S19",
+            "S20"
+          ],
+          "scope": "事实冲突需保留，不能改成统一 5 个",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "DOL03",
+          "claim": "套餐帮助介绍 Starter 20～60 个环境，并列 Cookie 导出、云同步等增加的能力。",
+          "source_ids": [
+            "S19"
+          ],
+          "scope": "不据此给出唯一 Starter 成交金额",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "DOL04",
+          "claim": "价格页 Base 100 环境月付 89 美元；Team 300 环境月付 159 美元，额外成员需按配置核算。",
+          "source_ids": [
+            "S20"
+          ],
+          "scope": "公开套餐或功能说明",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "DOL05",
+          "claim": "官方有环境限制和基础自动化说明。",
+          "source_ids": [
+            "S21",
+            "S22"
+          ],
+          "scope": "不推断免费 API、并发或特定检测结果",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "免费 5 个环境且没有争议",
+        "20 次是每日或所有新建通用额度",
+        "重建次数等于可同时保存的环境数",
+        "所有套餐均含免费额外团队成员",
+        "Dolphin 安全性、封号率或 Facebook 效果排名"
+      ],
+      "key": "dolphin-anty"
+    },
+    "multilogin": {
+      "name": "Multilogin",
+      "facts": [
+        {
+          "id": "MULTI01",
+          "claim": "Free 列明 5 个云手机与浏览器配置名额，不能简化成 5 台免费云手机或 5 个确定的桌面浏览器名额。",
+          "source_ids": [
+            "S23"
+          ],
+          "scope": "cloud mobile and browser profiles",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "MULTI02",
+          "claim": "免费附赠代理流量为一次性 200MB；1 个云手机配置附赠一次性 30 分钟移动时长。",
+          "source_ids": [
+            "S23"
+          ],
+          "scope": "一次性，不是每月",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "MULTI03",
+          "claim": "Pro 入门月付 11 美元，10 个配置；页面 7.08 美元/月是 85 美元年付的折算展示。",
+          "source_ids": [
+            "S23"
+          ],
+          "scope": "月付与年付口径分开",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "MULTI04",
+          "claim": "价格卡与 FAQ 对免费 API/团队的呈现不够一致，本轮不登记免费档 API/团队权限为已确认。",
+          "source_ids": [
+            "S23"
+          ],
+          "scope": "未确认字段，省略强结论",
+          "checked_at": "2026-10-27"
+        },
+        {
+          "id": "MULTI05",
+          "claim": "系统要求页列出 Windows 10 及以上 64 位、macOS 14 及以上、Ubuntu 22 及以上。",
+          "source_ids": [
+            "S24"
+          ],
+          "scope": "桌面系统条件",
+          "checked_at": "2026-10-27"
+        }
+      ],
+      "do_not_invent": [
+        "永久免费 5 台云手机或 5 个确定桌面环境",
+        "每月都赠 200MB 和 30 分钟",
+        "7.08 美元可以按月支付",
+        "免费 API、免费多人协作",
+        "5 个名额等于 5 个账号在平台上均被允许"
+      ],
+      "key": "multilogin"
+    }
+  },
+  "general_rules": [
+    "这是公开资料研究，不能改写成亲测、封号率或性能实测。",
+    "同一产品的数据统一从此事实包与套餐快照引用；源页面如有更新，记录变更再同步全部页面。",
+    "创建、打开、重建、环境保存名额和成员数必须各自保留对象与周期。",
+    "动态金额、仅图标权限和公开冲突项不得靠常识补全。"
+  ],
+  "illustrations": [
+    {
+      "id": "EX01",
+      "type": "hypothetical_arithmetic",
+      "description": "8 个固定环境，每天每个打开 3 次，共 24 次；在 10 个名额和每日 50 次打开的数量范围内。若每个打开 8 次，共 64 次，则超过 50 次。只说明额度，不说明实际运行结果。"
+    },
+    {
+      "id": "EX02",
+      "type": "hypothetical_arithmetic",
+      "description": "保存 40 个环境，每天选择 8 个、各打开 2 次，共 16 次；是否能在当日创建全部 40 个要另按日创建上限计算。每天想新建 15 个，会超过 ixBrowser 免费日创建 10 个的上限。"
+    },
+    {
+      "id": "EX03",
+      "type": "hypothetical_arithmetic",
+      "description": "长期需要 8 个环境时，Incogniton 前两个月的 10 个名额与之后的 3 个名额会给出不同的数量结果；不推断超额数据一定被删除或产生费用。"
+    }
+  ]
+}
