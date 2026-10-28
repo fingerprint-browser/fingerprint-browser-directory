@@ -1,16 +1,19 @@
-# 浏览器指纹怎么检测？5 个工具与结果阅读方法
+# 浏览器指纹怎么检测？6 个工具与结果阅读方法
 
 新建环境或换代理后，先检查网站实际收到的 IP 和浏览器参数，再保存为日常工作环境。建议在需要检查的浏览器环境里直接打开检测页，这样结果才能对应当前环境。
 
-## 5 个检测工具分别看什么？
+## 6 个检测工具分别看什么？
 
 | 工具 | 适合查看 | 入口 |
 |---|---|---|
 | BrowserLeaks | IP、WebRTC、Canvas、WebGL、字体与请求信息 | [BrowserLeaks](https://browserleaks.com/) |
+| ToDetect | IP、DNS/WebRTC 泄漏、Canvas、WebGL、时区与语言 | [ToDetect](https://www.todetect.net/) |
 | CreepJS | 浏览器特征、参数一致性与 JavaScript 修改痕迹 | [官方检测页](https://abrahamjuliot.github.io/creepjs/) |
 | Pixelscan | 通过交互页面查看浏览器与网络检测结果 | [Pixelscan](https://pixelscan.net/) |
 | AmIUnique | 当前指纹在其样本中的特征分布与独特程度 | [AmIUnique](https://amiunique.org/) |
 | Cover Your Tracks | 浏览器追踪保护与指纹识别相关表现 | [EFF 检测页](https://coveryourtracks.eff.org/) |
+
+ToDetect 适合在同一页面集中查看网络出口与浏览器特征。打开首页后，可以继续进入 DNS、WebRTC、Canvas 等检测模块，核对代理、时区、语言和图形信息。
 
 ## 第一步：确认网络出口
 
@@ -26,7 +29,7 @@
 
 ## 第三步：核对系统、语言和渲染信息
 
-在 BrowserLeaks 或 CreepJS 中查看系统、浏览器、时区、语言、屏幕、Canvas 和 WebGL。先确认系统类型、浏览器类型与自己的环境配置对应，再检查是否存在明显的参数错配。
+在 BrowserLeaks、CreepJS 或 ToDetect 中查看系统、浏览器、时区、语言、屏幕、Canvas 和 WebGL。先确认系统类型、浏览器类型与自己的环境配置对应，再检查是否存在明显的参数错配。
 
 Canvas 哈希值用于概括该页面的绘制结果，单个哈希没有统一的“安全值”。检查时更有用的是保留当前环境的配置，关闭再重开后比较结果，以及确认不同环境的 Cookie 和代理没有串用。
 

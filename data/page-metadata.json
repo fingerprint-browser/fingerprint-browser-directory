@@ -123,8 +123,8 @@
     },
     {
       "path": "guides/how-to-check-browser-fingerprints.md",
-      "title": "浏览器指纹怎么检测？5 个工具与结果阅读方法",
-      "description": "新建环境或换代理后，先检查网站实际收到的 IP 和浏览器参数，再保存为日常工作环境。建议在需要检查的浏览器环境里直接打开检测页，这样结果才能对应当前环境。"
+      "title": "浏览器指纹怎么检测？6 个工具与结果阅读方法",
+      "description": "介绍 ToDetect、BrowserLeaks、CreepJS 等 6 个浏览器指纹检测工具，了解 IP、DNS 与 WebRTC 泄漏、Canvas、WebGL 和参数一致性的检查方法。"
     },
     {
       "path": "guides/how-to-configure-proxy.md",
