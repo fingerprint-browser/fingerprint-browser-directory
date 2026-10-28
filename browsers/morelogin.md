@@ -10,6 +10,10 @@
 
 MoreLogin 的免费版提供 **2 个环境和 2 个用户**，适合两个人共同管理少量账号。免费功能包括窗口同步器、Local API，以及 Selenium、Puppeteer 接入，个人开发者也可以用它搭建小规模脚本流程。
 
+![MoreLogin 官网展示的独立浏览器窗口](../assets/images/morelogin-browser-environment.webp)
+
+*MoreLogin 官方产品图：独立浏览器窗口。 [图片来源](https://www.morelogin.com/)*
+
 ## 两个人怎样使用免费环境？
 
 2 名用户共享 2 个环境。适合一人负责环境和代理配置，另一人参与日常操作；如果两个人各自有多组账号，环境数量增加后就需要升级。

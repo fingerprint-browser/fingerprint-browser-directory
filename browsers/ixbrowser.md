@@ -10,6 +10,10 @@
 
 ixBrowser 的特点是**不限制保存的环境总数**，免费版按每天新建和打开的次数控制使用量。适合已经积累了较多固定环境，但平时只打开其中一部分的用户。
 
+![ixBrowser 帮助中心展示的环境列表与 Create Profile 按钮](../assets/images/ixbrowser-create-profile.webp)
+
+*ixBrowser 官方帮助截图：从 Browser List 创建新环境。 [图片来源](https://ixbrowser.com/en/guide?id=63)*
+
 ## 环境可以一直留着，每天操作有次数限制
 
 免费版每天最多创建 **10 个环境**、打开 **100 次**，并提供 2 个席位。建好的环境可以继续保留，日常重复使用时，主要消耗打开次数。

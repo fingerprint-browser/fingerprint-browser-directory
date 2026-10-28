@@ -31,6 +31,10 @@ ToDetect 适合在同一页面集中查看网络出口与浏览器特征。打�
 
 在 BrowserLeaks、CreepJS 或 ToDetect 中查看系统、浏览器、时区、语言、屏幕、Canvas 和 WebGL。先确认系统类型、浏览器类型与自己的环境配置对应，再检查是否存在明显的参数错配。
 
+![ToDetect Canvas 检测页面的指纹 ID 与 Canvas 功能检查区域](../assets/images/todetect-canvas-detection.jpg)
+
+*[ToDetect Canvas 页面](https://www.todetect.net/canvas/)示例：上方显示指纹 ID，下方列出 Canvas 功能检查项。*
+
 Canvas 哈希值用于概括该页面的绘制结果，单个哈希没有统一的“安全值”。检查时更有用的是保留当前环境的配置，关闭再重开后比较结果，以及确认不同环境的 Cookie 和代理没有串用。
 
 ## 唯一性、一致性和泄漏分别代表什么？

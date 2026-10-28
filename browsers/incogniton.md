@@ -10,6 +10,10 @@
 
 Incogniton 的 Starter 免费版前两个月提供 **10 个环境**，第 3 个月起调整为 **3 个**。短期体验可以使用较多配置，长期使用则需要按最终保留的账号数量安排。
 
+![Incogniton 官方展示的环境列表与账号分类](../assets/images/incogniton-profile-management.webp)
+
+*Incogniton 官方产品图：环境列表与账号分类。 [图片来源](https://incogniton.com/)*
+
 ## 两个月之后，需要保留多少环境？
 
 长期只有 1～3 个固定环境，可以继续使用免费版。需要保留 4～10 个环境时，Starter Plus 是维持 10 个环境的付费档。

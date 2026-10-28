@@ -10,6 +10,10 @@
 
 Dolphin Anty 免费版提供 **5 个浏览器环境，限 1 人使用**。少量固定账号可以从免费版开始，需要更多环境、云同步或自动化时，再选择 Starter、Base 或 Team。
 
+![Dolphin Anty 官方展示的环境列表、标签和状态标记](../assets/images/dolphin-anty-profile-list.webp)
+
+*Dolphin Anty 官方产品图：环境列表、标签和状态标记。 [图片来源](https://dolphin-anty.com/)*
+
 ## 免费版适合做什么？
 
 免费版适合个人保存和管理少量独立环境。把常用账号分别放进对应配置后，可以通过标签、状态和分组整理日常工作。

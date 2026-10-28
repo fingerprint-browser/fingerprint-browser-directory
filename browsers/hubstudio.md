@@ -10,6 +10,10 @@
 
 Hubstudio 的免费版不限制保存的环境总数，每天可以打开 20 次。它比较适合已有较多固定环境、每天只操作其中一部分的用法；需要批量操作和 API 时，再看 VIP 的日打开额度。
 
+![Hubstudio 创建环境时的内核、操作系统和 User Agent 设置](../assets/images/hubstudio-profile-settings.webp)
+
+*Hubstudio 官方帮助截图：创建环境时选择内核、操作系统和 User Agent。 [图片来源](https://support-orig.hubstudio.cn/645e/2879)*
+
 ## 保存数量和打开次数分别计算
 
 环境创建并保存后，可以继续留在列表中；日常启动窗口消耗打开次数。免费版适合低频使用，VIP 按所选档位提高到每日 500～2,000 次，环境数据同步与导入也可以结合日常分工使用。

@@ -1,0 +1,206 @@
+{
+  "updated_at": "2026-10-28",
+  "images": [
+    {
+      "file": "assets/images/browser-environment-overview.svg",
+      "kind": "original_diagram",
+      "created_at": "2026-10-28",
+      "width": 1200,
+      "height": 540,
+      "sha256": "510d226f1911dceeafd3779127f780815c3b922db704916784874b6084a3d9e4",
+      "used_in": [
+        "README.md"
+      ],
+      "bytes": 145735,
+      "text_rendering": "文字转为矢量路径，避免依赖阅读设备的中文字体。"
+    },
+    {
+      "file": "assets/images/bitbrowser-profile-list.webp",
+      "kind": "official_help_screenshot",
+      "source_url": "https://www.bitbrowser.cn/?code=8467b4",
+      "retrieved_at": "2026-10-28",
+      "alt": "比特浏览器环境列表中的窗口、分组与创建窗口入口",
+      "width": 1280,
+      "height": 770,
+      "bytes": 36690,
+      "sha256": "5b2f02057d61991acb0ec7c5e7ee916ea192bf81d0dc6029b47b8b3fdacd1682",
+      "source_sha256": "47d95d916ec7c01e5978331a5dadbf7e42e3ad2c225015bc37c4cdeeda0a5d12",
+      "used_in": [
+        "browsers/bitbrowser.md"
+      ],
+      "source_host": "doc.bitbrowser.cn",
+      "source_document": "/help1/chuang-kou-guan-li/xin-jian-liu-lan-qi-chuang-kou",
+      "source_version": "官方帮助中心存量截图"
+    },
+    {
+      "file": "assets/images/adspower-profile-management.webp",
+      "kind": "official_product_visual",
+      "source_url": "https://www.adspower.com/",
+      "retrieved_at": "2026-10-28",
+      "alt": "AdsPower 官方展示的环境列表与平台配置入口",
+      "width": 1992,
+      "height": 1214,
+      "bytes": 135404,
+      "sha256": "cbec5aa8128c0f37425481b8e1a554b4e6ceaf3e46e9386bee7677c2f1eb4a05",
+      "source_sha256": "cbec5aa8128c0f37425481b8e1a554b4e6ceaf3e46e9386bee7677c2f1eb4a05",
+      "used_in": [
+        "browsers/adspower.md"
+      ]
+    },
+    {
+      "file": "assets/images/morelogin-browser-environment.webp",
+      "kind": "official_product_visual",
+      "source_url": "https://www.morelogin.com/",
+      "retrieved_at": "2026-10-28",
+      "alt": "MoreLogin 官网展示的独立浏览器窗口",
+      "width": 1000,
+      "height": 524,
+      "bytes": 59578,
+      "sha256": "07075b5f5659fdc97411b0eaa22f1ad69bcd384e533d11204af152eb44fcf790",
+      "source_sha256": "1378a2df1d51e5c4beb3972f4f593ef02fe41b1f8254fd32dd315144c703cbf2",
+      "used_in": [
+        "browsers/morelogin.md"
+      ]
+    },
+    {
+      "file": "assets/images/ixbrowser-create-profile.webp",
+      "kind": "official_help_screenshot",
+      "source_url": "https://ixbrowser.com/en/guide?id=63",
+      "retrieved_at": "2026-10-28",
+      "alt": "ixBrowser 帮助中心展示的环境列表与 Create Profile 按钮",
+      "width": 1400,
+      "height": 797,
+      "bytes": 30384,
+      "sha256": "c69baedd9c2247fa9fc3c67f46a922eb05c37a01d4eed0b1811daf9de4bbe8cc",
+      "source_sha256": "e5cec6507e44a8c7b95f63023d294a0a29915e3949e638131ec980fd7cb9369d",
+      "used_in": [
+        "browsers/ixbrowser.md"
+      ]
+    },
+    {
+      "file": "assets/images/incogniton-profile-management.webp",
+      "kind": "official_product_visual",
+      "source_url": "https://incogniton.com/",
+      "retrieved_at": "2026-10-28",
+      "alt": "Incogniton 官方展示的环境列表与账号分类",
+      "width": 1400,
+      "height": 1000,
+      "bytes": 75848,
+      "sha256": "d02dd6033f2bf0eed648b465d7d00cd8c5116a0a70f4f5869cfdfe6631723e8b",
+      "source_sha256": "8f6d3705d57f1142d570aa140cc60ea566a4ac2557e62b0562cbb0660d553260",
+      "used_in": [
+        "browsers/incogniton.md"
+      ]
+    },
+    {
+      "file": "assets/images/dolphin-anty-profile-list.webp",
+      "kind": "official_product_visual",
+      "source_url": "https://dolphin-anty.com/",
+      "retrieved_at": "2026-10-28",
+      "alt": "Dolphin Anty 官方展示的环境列表、标签和状态标记",
+      "width": 2000,
+      "height": 504,
+      "bytes": 62010,
+      "sha256": "0ac468b26d50f919cc6387f7a7d9b53567acac9917da8a2c18cd4dc36c96f1a9",
+      "source_sha256": "38d734021dce530eafcd06752961786f0e16f4f80cf7aa1254a8c6df45a939c7",
+      "used_in": [
+        "browsers/dolphin-anty.md"
+      ]
+    },
+    {
+      "file": "assets/images/multilogin-local-cloud-storage.webp",
+      "kind": "official_help_screenshot",
+      "source_url": "https://multilogin.com/help/en_US/cloud-and-local-storage",
+      "retrieved_at": "2026-10-28",
+      "alt": "Multilogin 创建菜单中的 Local 和 Cloud 环境保存选项",
+      "width": 2206,
+      "height": 604,
+      "bytes": 45180,
+      "sha256": "485f69215318933641c8f89b1c60341787bfbecfabe515ed62047f1ca629d270",
+      "source_sha256": "5255251234467f4f0f69ca75eb7c1a89d88ab83b3ba12c57020a696ccec84039",
+      "used_in": [
+        "browsers/multilogin.md"
+      ]
+    },
+    {
+      "file": "assets/images/octo-browser-profile-management.webp",
+      "kind": "official_product_visual",
+      "source_url": "https://octobrowser.net/",
+      "retrieved_at": "2026-10-28",
+      "alt": "Octo Browser 官方展示的环境列表与代理列",
+      "width": 2476,
+      "height": 498,
+      "bytes": 90680,
+      "sha256": "79b58e69eace339175afbea413e94a87d9bb79da08c4043e76eff8b7b720c212",
+      "source_sha256": "cba0e3f0c9d6cf011a86352271258e5580e48306aa5b08de6d6f0b4eea7593f0",
+      "used_in": [
+        "browsers/octo-browser.md"
+      ]
+    },
+    {
+      "file": "assets/images/hubstudio-profile-settings.webp",
+      "kind": "official_help_screenshot",
+      "source_url": "https://support-orig.hubstudio.cn/645e/2879",
+      "retrieved_at": "2026-10-28",
+      "alt": "Hubstudio 创建环境时的内核、操作系统和 User Agent 设置",
+      "width": 1373,
+      "height": 809,
+      "bytes": 27654,
+      "sha256": "c6ffce3a559400f039fed848bd64e9bff533480813cc4a66db6469c2fdfbf359",
+      "source_sha256": "500bee669c11c5af48d7320c35b775f52755b85f3dd2883d550efa7c94313e69",
+      "used_in": [
+        "browsers/hubstudio.md"
+      ]
+    },
+    {
+      "file": "assets/images/kameleo-default-profile-settings.webp",
+      "kind": "official_help_screenshot",
+      "source_url": "https://help.kameleo.io/article/72-default-profile-settings",
+      "retrieved_at": "2026-10-28",
+      "alt": "Kameleo 设置页面中的 Default Profile Settings 入口",
+      "width": 1336,
+      "height": 776,
+      "bytes": 31220,
+      "sha256": "b2502004fd2557cb1a2c4a25aa479395680c1ebdcb0fe0e8e7b5547920e240f5",
+      "source_sha256": "b0270ba122ab27c463cb33e8910bbb757ff2dba5fd41b39f020caf1a715d0b6c",
+      "used_in": [
+        "browsers/kameleo.md"
+      ]
+    },
+    {
+      "file": "assets/images/bitbrowser-proxy-protocols.webp",
+      "kind": "official_help_screenshot",
+      "source_url": "https://www.bitbrowser.cn/?code=8467b4",
+      "retrieved_at": "2026-10-28",
+      "alt": "比特浏览器自定义代理中的 HTTP、HTTPS、SOCKS5 与 SSH 协议选项",
+      "width": 1280,
+      "height": 770,
+      "bytes": 44582,
+      "sha256": "fe616c44b82aac4eccbb91742db46238db2862ee2f0ca5f5e378b9bac55586a7",
+      "source_sha256": "6d68046c8e840f12a9ed47004c0f7655f39fb81df667d556b19e1e5a8fab8530",
+      "used_in": [
+        "browsers/bitbrowser.md",
+        "guides/how-to-configure-proxy.md"
+      ],
+      "source_host": "doc.bitbrowser.cn",
+      "source_document": "/help1/dailiip/she-zhi-httphttpssock5ssh-dai-li-ip",
+      "source_version": "官方帮助中心存量截图"
+    },
+    {
+      "file": "assets/images/todetect-canvas-detection.jpg",
+      "kind": "page_screenshot",
+      "source_url": "https://www.todetect.net/canvas/",
+      "retrieved_at": "2026-10-28",
+      "alt": "ToDetect Canvas 检测页面的指纹 ID 与 Canvas 功能检查区域",
+      "width": 1363,
+      "height": 936,
+      "bytes": 132054,
+      "sha256": "d9d90e6a4db05bd36f563aae9c6c05d13abb3326c97a3343b5c9314d81baf128",
+      "source_sha256": "d9d90e6a4db05bd36f563aae9c6c05d13abb3326c97a3343b5c9314d81baf128",
+      "used_in": [
+        "guides/how-to-check-browser-fingerprints.md"
+      ],
+      "capture_context": "普通浏览器中的工具页面示例；未使用产品客户端做性能或防关联测试。"
+    }
+  ]
+}

@@ -42,6 +42,10 @@ Multilogin 则适合同时关注浏览器、云手机和内置代理的用户。
 
 ## 云同步、云手机和云端浏览器怎样区分？
 
+![Multilogin 创建菜单中的 Local 和 Cloud 环境保存选项](../assets/images/multilogin-local-cloud-storage.webp)
+
+*Multilogin 官方帮助截图：创建环境时选择 Local 或 Cloud 保存方式。 [图片来源](https://multilogin.com/help/en_US/cloud-and-local-storage)*
+
 保存到云端的环境配置，用于在不同设备继续打开原资料；云手机则提供 Android 运行环境。选择前先确定任务是在网页还是 App，再分别计算浏览器配置、移动运行时间与代理流量。
 
 已有自己的代理时，可以按环境保存并检查实际出口，方法见[代理配置指南](../guides/how-to-configure-proxy.md)。需要自己部署浏览器的开发者，也可以比较[开源浏览器](../guides/best-open-source-fingerprint-browsers.md)与 [Kameleo Docker](kameleo.md)。

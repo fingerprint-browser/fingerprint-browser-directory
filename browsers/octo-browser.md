@@ -10,6 +10,10 @@
 
 Octo Browser 将浏览器环境、代理、Cookie、标签与文件夹集中管理。它按订阅提供环境资源，Lite 适合少量手动操作；需要 API 时，从 Base 档开始比较。
 
+![Octo Browser 官方展示的环境列表与代理列](../assets/images/octo-browser-profile-management.webp)
+
+*Octo Browser 官方产品图：环境列表与代理分配。 [图片来源](https://octobrowser.net/)*
+
 ## Lite 与 Base 的区别
 
 <!-- BEGIN GENERATED:plans:octo-browser -->

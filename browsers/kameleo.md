@@ -33,6 +33,10 @@ Startup 月付为 59 欧元，提供 10 个浏览器并发、5,000 个云端环�
 
 ## 桌面客户端和 Docker 分别适合谁？
 
+![Kameleo 设置页面中的 Default Profile Settings 入口](../assets/images/kameleo-default-profile-settings.webp)
+
+*Kameleo 官方帮助截图：Default Profile Settings 用于调整新环境的默认设置。 [图片来源](https://help.kameleo.io/article/72-default-profile-settings)*
+
 手动查看环境可以使用 Windows 或 macOS 客户端；服务器部署可以使用 Linux 或 Windows Docker。容器中的浏览器在自己的基础设施运行，持久化目录、CPU、内存和并发需要一起安排。
 
 需要 Linux 容器或 Firefox 系自动化时，Kameleo 的双内核与容器方式值得比较。主要是个人在桌面管理网页账号，希望免费使用同步器、RPA 和脚本，可以先看[比特浏览器的 10 个免费环境](bitbrowser.md)。
