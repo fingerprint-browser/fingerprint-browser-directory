@@ -21,12 +21,14 @@ Incogniton 的免费版（Starter）并不是无期限保持同一环境数量�
 
 根据[Incogniton 官方价格与功能表](https://incogniton.com/pricing/)，四档公开方案的关键差异如下：
 
-| 套餐名称 | 浏览器环境数量 | 团队席位说明 | 月付公开标价（不含长周期折扣） | 自动化与进阶功能列项（按官方功能表） |
+<!-- BEGIN GENERATED:plans:incogniton -->
+| 套餐 | 保存环境数 | 成员或员工 | 价格与付款周期 | 额度与功能说明 |
 |---|---|---|---|---|
-| Starter（免费档） | 前 2 个月 10 个，之后 3 个 | 单人基础使用 | 0 美元 | 基础环境隔离；免费档不含 API、同步器与 Cookie 导出（[价格页](https://incogniton.com/pricing/)） |
-| Starter Plus | 10 个环境 | 单人基础使用 | **19.99 美元/月** | 主要用于在两个月后继续保留 10 个环境名额（[价格页](https://incogniton.com/pricing/)） |
-| Entrepreneur | 50 个环境 | 单人或进阶配置 | **29.99 美元/月** | 功能表列明包含 **API、Selenium/Puppeteer、同步器（Synchronizer）、Cookie 导出、环境转移**（[价格页](https://incogniton.com/pricing/)） |
-| Professional | 150 个环境 | 包含 **3 个团队席位** | **79.99 美元/月** | 包含上述自动化能力，并增加 150 个环境与 3 个团队成员席位（[价格页](https://incogniton.com/pricing/)） |
+| Starter | 前 2 个月 10 个，之后 3 个 | 单人基础使用 | 免费（国际资料） | 不含 API、同步器 |
+| Starter Plus | 10 个环境 | 无附加团队席位 | 19.99 美元/月（国际资料） | 不含 API、同步器 |
+| Entrepreneur | 50 个环境 | 额外席位可购 | 29.99 美元/月（国际资料） | 含 API、同步器；包含 Selenium/Puppeteer、Cookie 导出与环境转移 |
+| Professional | 150 个环境 | 3 个团队成员席位 | 79.99 美元/月（国际资料） | 含 API、同步器 |
+<!-- END GENERATED:plans:incogniton -->
 
 上表为月付标价，半年付等长周期另有折扣。
 

@@ -1,0 +1,30 @@
+name: 价格或额度更正
+description: 提交官方套餐、免费额度或权限变化
+title: "[数据更正] "
+body:
+  - type: input
+    id: product
+    attributes:
+      label: 产品与套餐
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 当前值与新值
+      description: 写明站点、币种、付款周期和成员口径。
+    validations:
+      required: true
+  - type: input
+    id: official_source
+    attributes:
+      label: 官方来源链接
+    validations:
+      required: true
+  - type: input
+    id: checked_at
+    attributes:
+      label: 查看日期
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true

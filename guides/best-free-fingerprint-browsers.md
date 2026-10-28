@@ -8,16 +8,18 @@
 
 ## 8 款指纹浏览器免费版额度与关键限制对照表
 
-| 产品详情 | 免费保存名额与期限 | 操作次数 | 用户或席位 | 自动化与资源条件 |
+<!-- BEGIN GENERATED:free-comparison -->
+| 产品详情 | 免费保存数量 | 操作次数 | 成员或席位 | 免费自动化入口 |
 |---|---|---|---|---|
-| [比特浏览器](../browsers/bitbrowser.md) | 长期 10 个环境 | 每日创建 20 个、打开 50 次 | 1 名成员 | 免费卡列有 Local API、RPA、同步器 |
-| [ixBrowser](../browsers/ixbrowser.md) | 保存环境不限 | 每日创建 10 个、打开 100 次 | 2 席位 | API、同步器权限另核 |
-| [Incogniton](../browsers/incogniton.md) | 前 2 个月 10 个，之后 3 个 | 价格页未单列日打开上限 | 单人基础使用 | 免费档不含 API、同步器、Cookie 导出 |
-| [Multilogin](../browsers/multilogin.md) | 5 个云手机与浏览器配置名额 | 1 个云手机配置赠一次性 30 分钟 | 团队权限另核 | 一次性 200MB 代理流量 |
-| [GoLogin](../browsers/gologin.md) | Forever Free 为 3 个环境 | 每自然月创建 25 次；删除不返还 | 无额外成员 | 不含 API、云端启动、Cookie 导出与分享 |
-| [Dolphin Anty](../browsers/dolphin-anty.md) | 帮助页为 3 个；价格表局部为 5 个 | 每自然月重建 20 次 | 无免费额外成员 | 导出与云同步等列在付费档 |
-| [MoreLogin](../browsers/morelogin.md) | 长期 2 个浏览器环境 | 价格页未单列日打开上限 | 2 个用户 | 免费卡列有同步器、Local API、Selenium/Puppeteer |
-| [AdsPower](../browsers/adspower.md) | 长期 2 个；另有 7 天完整功能试用 | 价格页未单列日打开上限 | 1 超级管理员、0 额外成员 | 自动化权益按当前套餐核对 |
+| [比特浏览器 BitBrowser](../browsers/bitbrowser.md) | 10 个环境 | 每日创建 20 个；每日打开 50 次 | 1 名成员 | 含 API、RPA、同步器 |
+| [AdsPower](../browsers/adspower.md) | 2 个环境 | 官方未单列 | 1 超级管理员，0 额外成员 | 权限未登记 |
+| [GoLogin](../browsers/gologin.md) | 3 个环境 | 每自然月创建 25 个 | 无额外团队成员 | 不含 API |
+| [MoreLogin](../browsers/morelogin.md) | 2 个环境 | 官方未单列 | 2 个用户（总数） | 含 API、同步器 |
+| [ixBrowser](../browsers/ixbrowser.md) | 保存环境不限 | 每日创建 10 个；每日打开 100 次 | 2 席位 | 权限未登记 |
+| [Incogniton](../browsers/incogniton.md) | 前 2 个月 10 个，之后 3 个 | 官方未单列 | 单人基础使用 | 不含 API、同步器 |
+| [Dolphin Anty](../browsers/dolphin-anty.md) | 3 个环境 | 每自然月重建 20 次 | 无免费额外成员 | 权限未登记 |
+| [Multilogin](../browsers/multilogin.md) | 5 个混合配置 | 官方未单列 | 未登记 | 权限未登记 |
+<!-- END GENERATED:free-comparison -->
 
 部分产品未公开日打开上限，详细条件见对应产品详情；价格与帮助入口见[产品资料](../SOURCES.md)。
 

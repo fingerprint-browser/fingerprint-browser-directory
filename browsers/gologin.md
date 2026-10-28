@@ -56,6 +56,15 @@
 2. **适合升级 GoLogin Professional 10（9 美元/月）的情况**：你是 2026 年 1 月后注册的新账号，环境数量在 4～10 个之间，看重其跨平台支持（含移动端与桌面端配置同步），或者明确需要解锁付费档才开放的[API 接口](https://gologin.com/docs/api-reference/introduction/quickstart)、Cookie 导出与云端启动能力。
 3. **建议横向对比其他工具的情况**：如果你希望在免费阶段就保留最多 10 个环境、或者希望免费档直接包含 Local API 与窗口同步功能，可以进一步阅读 [GoLogin 与比特浏览器对比](../comparisons/bitbrowser-vs-gologin.md)，对比两者在本地运行、云端特性与人民币/美元计费上的具体差异。
 
+## 套餐数据速查
+
+<!-- BEGIN GENERATED:plans:gologin -->
+| 套餐 | 保存环境数 | 成员或员工 | 价格与付款周期 | 额度与功能说明 |
+|---|---|---|---|---|
+| Forever Free | 3 个环境 | 无额外团队成员 | 免费（国际资料） | 每自然月创建 25 个；不含 API；另有 7 天试用；删除不返还创建次数；每月 1 日 00:00 UTC 重置；不含云端启动、Cookie 导出与分享 |
+| Professional 10 | 10 个环境 | 额外成员另购 | 9 美元/月（国际资料） | 含 API；新价格适用于 2026 年 1 月起注册账号；API 300 RPM，1 个并发云端会话、100 小时总使用量 |
+<!-- END GENERATED:plans:gologin -->
+
 ---
 
 [返回产品对比总览](../README.md) · [官方来源](../SOURCES.md)

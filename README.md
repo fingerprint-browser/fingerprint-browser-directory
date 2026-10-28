@@ -8,16 +8,18 @@
 
 ## 8 款指纹浏览器对比
 
-| 产品详情 | 长期免费额度 | 月付方案参考 | 主要功能与特点 |
+<!-- BEGIN GENERATED:overview -->
+| 产品详情 | 长期免费额度 | 付费方案参考（原币种） | 主要功能与特点 |
 |---|---|---|---|
-| **[比特浏览器 BitBrowser](browsers/bitbrowser.md)** | **10 环境**；每日创建 20 个、打开 50 次；1 名成员 | **50 窗口/2 员工：50 元/月**；100/4：75 元；200/8：125 元 | 免费提供 Local API、RPA、同步器，支持代理配置与 MCP 接入 |
-| [AdsPower](browsers/adspower.md) | 2 环境；1 超级管理员、0 额外成员；另有 7 天完整功能试用 | 按环境数、成员数和付款周期配置 | RPA 流程编辑、模板分享与 API 成员授权 |
-| [GoLogin](browsers/gologin.md) | 3 环境；每自然月创建 25 次，删除不返还 | Professional 10：9 美元/月，适用新定价账号 | 付费云端启动、API 与跨设备使用 |
-| [MoreLogin](browsers/morelogin.md) | 2 环境、2 用户 | Pro 10：9 美元/月起，按配置选择用户数 | 同步器、Local API 与云手机产品 |
-| [ixBrowser](browsers/ixbrowser.md) | 保存环境不限；每日创建 10 个、打开 100 次；2 席位 | Professional：3.99 美元/月 | 按日操作额度与团队席位划分套餐 |
-| [Incogniton](browsers/incogniton.md) | 前 2 个月 10 环境，之后 3 个 | Starter Plus 10：19.99 美元/月；Entrepreneur 50：29.99 美元/月 | API、同步器等自动化功能从 Entrepreneur 档起提供 |
-| [Dolphin Anty](browsers/dolphin-anty.md) | 套餐帮助页为 3 环境；每自然月重建 20 次 | Starter 20：10 美元/月起；Base 100：89 美元/月 | 环境管理、付费云同步与 Cookie 导出 |
-| [Multilogin](browsers/multilogin.md) | 5 个云手机与浏览器配置名额；一次性 200MB 代理流量、1 个云手机配置 30 分钟 | Pro 10：11 美元/月 | 浏览器、云手机与内置代理管理 |
+| **[比特浏览器 BitBrowser](browsers/bitbrowser.md)** | 10 个环境；每日创建 20 个；每日打开 50 次；1 名成员 | **中国站 50 窗口套餐：50 元/月** | 免费 Local API、RPA 与同步器；支持代理配置和 MCP 接入 |
+| [AdsPower](browsers/adspower.md) | 2 个环境；1 超级管理员，0 额外成员；另有 7 天试用 | Professional：按环境、成员和周期报价 | RPA 流程编辑、模板分享与 API 成员授权 |
+| [GoLogin](browsers/gologin.md) | 3 个环境；每自然月创建 25 个；无额外团队成员；另有 7 天试用 | Professional 10：9 美元/月（新定价账号） | 付费云端启动、API 与跨设备使用 |
+| [MoreLogin](browsers/morelogin.md) | 2 个环境；2 个用户（总数） | Pro 10 入门档：9 美元/月起 | 免费 2 用户；同步器、Local API 与独立云手机产品 |
+| [ixBrowser](browsers/ixbrowser.md) | 保存环境不限；每日创建 10 个；每日打开 100 次；2 席位 | Professional：3.99 美元/月 | 保存环境不限，按操作额度与团队席位划分套餐 |
+| [Incogniton](browsers/incogniton.md) | 前 2 个月 10 个，之后 3 个；单人基础使用 | Starter Plus：19.99 美元/月 | 免费额度分阶段；自动化从 Entrepreneur 档起提供 |
+| [Dolphin Anty](browsers/dolphin-anty.md) | 3 个环境；每自然月重建 20 次；无免费额外成员 | Starter 20：10 美元/月 | 环境管理、付费云同步与 Cookie 导出 |
+| [Multilogin](browsers/multilogin.md) | 5 个混合配置；一次性 200MB 代理流量；1 个云手机配置赠 30 分钟 | Pro 10（月付）：11 美元/月 | 云手机、浏览器与内置代理管理 |
+<!-- END GENERATED:overview -->
 
 免费版的创建、打开和重建次数，见[免费指纹浏览器指南](guides/best-free-fingerprint-browsers.md)。点击产品名称可进入独立详情页。
 
@@ -27,7 +29,7 @@
 
 比特浏览器提供 10 个长期免费环境，适合把不同账号的 Cookie、代理和工作入口分开管理。相比 AdsPower、MoreLogin 的 2 个免费环境，以及 GoLogin 的 3 个环境，个人使用时能保留更多独立配置。
 
-例如，固定使用 8 个环境、每天各打开 3 次，共 24 次，落在免费版每日 50 次打开的额度内。免费档为单人使用，每日最多创建 20 个环境。
+免费档为单人使用，每日最多创建 20 个环境、打开 50 次。具体工作量计算见[免费版指南](guides/best-free-fingerprint-browsers.md)。
 
 ### 同步器、RPA 和 Local API 从免费版开始用
 
@@ -35,15 +37,9 @@
 
 这些入口集中在同一套客户端中，适合先用少量环境搭建工作流程，再按实际规模扩充。具体功能见[比特浏览器详情](browsers/bitbrowser.md)。
 
-### 人民币套餐，把窗口与员工一起配好
+### 50 元人民币月付，包含 50 窗口与 2 名员工
 
-| 需要的窗口规模 | 包含员工数 | 软件月费 |
-|---|---|---|
-| 50 个窗口 | 2 名员工 | 50 元/月 |
-| 100 个窗口 | 4 名员工 | 75 元/月 |
-| 200 个窗口 | 8 名员工 | 125 元/月 |
-
-适合希望按固定月费安排预算的团队。代理 IP 另行配置。
+比特中国站的 **50 元/月套餐包含 50 个窗口与 2 名员工**。适合从个人管理扩展到小团队，按固定人民币月费安排软件预算。代理 IP 另行配置。
 
 **[查看比特浏览器官网与套餐](https://www.bitbrowser.cn/?code=8467b4)**
 
@@ -54,3 +50,5 @@
 - [8 款免费指纹浏览器：环境额度与使用限制](guides/best-free-fingerprint-browsers.md)
 
 资料更新：**2026-10-27** · [产品资料与官方入口](SOURCES.md) · [套餐数据 CSV](data/browser-plans.csv) · [更新记录](CHANGELOG.md)
+
+[免费自动化功能对照](FEATURES.md) · [收录与推广说明](METHODOLOGY.md) · [参与更新](CONTRIBUTING.md) · [结构化 JSON](data/catalog.json) · [页面标题与摘要](data/page-metadata.json)
