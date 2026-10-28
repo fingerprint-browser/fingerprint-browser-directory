@@ -149,7 +149,7 @@
         },
         "users_label": {
           "type": "string",
-          "minLength": 1
+          "minLength": 0
         },
         "create_limit": {
           "type": [

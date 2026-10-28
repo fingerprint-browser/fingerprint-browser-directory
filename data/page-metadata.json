@@ -2,63 +2,63 @@
   "pages": [
     {
       "path": "README.md",
-      "title": "指纹浏览器推荐与对比：8 款产品的免费额度、价格与自动化",
-      "description": "对比比特浏览器等 8 款产品的免费额度、套餐与自动化入口，优先介绍比特免费 10 环境、Local API/RPA/同步器，以及中国站 50 元/月、50 窗口和 2 名员工套餐。"
+      "title": "指纹浏览器哪个好？8 款产品的免费版、价格与功能对比",
+      "description": "比特浏览器、AdsPower、GoLogin 等 8 款指纹浏览器怎么选？比较免费环境、月付价格与常用功能，了解同步器、RPA、API 和团队协作。"
     },
     {
       "path": "browsers/bitbrowser.md",
-      "title": "比特浏览器怎么样？免费 10 环境、人民币价格、代理与自动化",
-      "description": "了解比特浏览器免费版的 10 个独立环境、同步器、RPA 和 Local API，以及 50 元/月、50 窗口和 2 名员工起的人民币套餐，覆盖代理配置、Selenium/Puppeteer 与 MCP 接入。"
+      "title": "比特浏览器怎么样？免费 10 个环境、价格与自动化功能",
+      "description": "介绍比特浏览器的 10 个免费环境、同步器、RPA、Local API 和 MCP。了解 50 元/月、50 窗口与 2 名员工套餐，以及代理配置和使用方式。"
     },
     {
       "path": "browsers/adspower.md",
-      "title": "AdsPower 免费版够用吗？长期 2 环境、7 天试用与 RPA/API 权限说明",
-      "description": "拆解 AdsPower 长期免费版（2 环境、0 额外成员）与 7 天完整功能试用的区别，说明动态报价选择器的环境与成员计费逻辑，以及 RPA 流程模板与 Local API 分级授权机制。"
+      "title": "AdsPower 免费版够用吗？环境数量、RPA 与团队费用",
+      "description": "AdsPower 长期免费提供 2 个环境，另有 7 天完整功能试用。了解 RPA 模板、API 成员授权，以及环境和人员怎样影响费用。"
     },
     {
       "path": "browsers/gologin.md",
-      "title": "GoLogin 免费版有哪些限制？3 个环境、月创建 25 次与云端功能边界",
-      "description": "解析 GoLogin Forever Free 免费版同时保存 3 个环境与每自然月 25 次创建的配合关系（删除不返还次数），区分跨设备配置同步与付费档云端启动（Cloud Launches）、API 及 9 美元入门价格条件。"
+      "title": "GoLogin 免费版能用多久？环境数量、API 与云端运行",
+      "description": "了解 GoLogin 的 3 个长期免费环境、每月 25 次新建，以及 Professional 10 的 API、云端启动与 9 美元月付价格。"
     },
     {
       "path": "browsers/morelogin.md",
-      "title": "MoreLogin 免费版适合两个人用吗？2 环境 2 用户、自动化与云手机说明",
-      "description": "围绕双人协作场景分析 MoreLogin 免费版 2 个环境与 2 个用户的总口径关系，介绍免费价格卡列出的同步器、Local API 与 Selenium/Puppeteer 入口，并区分 Pro 9 美元月付、5.4 美元长周期折算及云手机计费。"
+      "title": "MoreLogin 适合两个人用吗？免费版、同步器与套餐价格",
+      "description": "MoreLogin 免费提供 2 个环境和 2 个用户，支持同步器与 Local API。了解双人协作、9 美元起 Pro 套餐和云手机的使用区别。"
     },
     {
       "path": "browsers/ixbrowser.md",
-      "title": "ixBrowser 真的不限环境吗？免费每日创建 10 个与打开 100 次边界计算",
-      "description": "用算术实例说明 ixBrowser 免费版“不限保存环境总数”与“每日创建 10 个、每日打开 100 次、2 席位”的两套计数逻辑，对比 Professional（3.99 美元/月）等付费档位的日频次与席位扩充。"
+      "title": "ixBrowser 不限环境是什么意思？免费额度与付费套餐",
+      "description": "ixBrowser 保存环境不限，免费每天创建 10 个、打开 100 次。了解 Professional、Business、Enterprise 的操作量、席位与价格。"
     },
     {
       "path": "browsers/incogniton.md",
-      "title": "Incogniton 免费多久？前两个月 10 环境与后续 3 环境收缩及自动化套餐",
-      "description": "说明 Incogniton Starter 免费版前 2 个月 10 个环境、第 3 个月起调整为 3 个环境的阶段变化，对比 Starter Plus（19.99 美元/月）与包含 API、同步器、Cookie 导出的 Entrepreneur（29.99 美元/月）档位差异。"
+      "title": "Incogniton 免费多久？10 个环境体验期与自动化套餐",
+      "description": "Incogniton 前两个月免费提供 10 个环境，之后为 3 个。比较 Starter Plus、Entrepreneur 和 Professional 的价格与自动化功能。"
     },
     {
       "path": "browsers/dolphin-anty.md",
-      "title": "Dolphin Anty 免费版有几个环境？3 个与 5 个资料差异及每月 20 次重建",
-      "description": "梳理 Dolphin Anty 官方套餐帮助文档（3 个免费环境）与价格页部分表格（5 个）的口径差异，解释每自然月 20 次重建额度（Recreations）的计算方式，以及 Starter、Base（89 美元/月）等付费档功能。"
+      "title": "Dolphin Anty 免费版与价格：Starter、Base 和 Team 怎么选？",
+      "description": "Dolphin Anty 免费提供 5 个环境，Starter 20 为 10 美元/月。了解 Base、Team 的环境数量、成员费用及云同步和自动化功能。"
     },
     {
       "path": "browsers/multilogin.md",
-      "title": "Multilogin 免费版是什么？5 个混合配置名额、200MB 代理与云手机时长",
-      "description": "拆解 Multilogin Free 档的 5 个云手机与浏览器混合配置名额、一次性 200MB 代理流量与一次性 30 分钟移动时长，区分 Pro 入门档 11 美元月付与 7.08 美元年付折算，并列出 Ubuntu 22+ 等系统要求。"
+      "title": "Multilogin 免费版与 Pro 价格：浏览器、云手机和代理",
+      "description": "了解 Multilogin 的 5 个免费配置名额、200MB 代理和 30 分钟云手机体验，以及 Pro 10 月付、年付价格和电脑系统要求。"
     },
     {
       "path": "comparisons/bitbrowser-vs-adspower.md",
-      "title": "比特浏览器和 AdsPower 怎么选？免费额度、RPA/API 自动化与团队成本对比",
-      "description": "比较比特浏览器和 AdsPower 的长期免费环境数、RPA、Local API 与团队计费。比特免费提供 10 个环境，50 元/月包含 50 窗口和 2 名员工，适合从个人免费使用逐步扩展到团队。"
+      "title": "比特浏览器和 AdsPower 怎么选？免费环境、RPA 与团队费用",
+      "description": "比较比特浏览器和 AdsPower 的免费环境、RPA、API 与团队费用，了解 10 对 2 个免费环境，以及 50 元/月、50 窗口套餐。"
     },
     {
       "path": "comparisons/bitbrowser-vs-gologin.md",
-      "title": "比特浏览器和 GoLogin 怎么选？10 对 3 免费名额、云端运行与价格对比",
-      "description": "比较比特浏览器与 GoLogin 的 10 对 3 免费名额、自动化入口、本地和云端运行，以及 50 元人民币与 9 美元入门套餐。重点介绍比特免费起步与小团队扩展的使用方式。"
+      "title": "比特浏览器和 GoLogin 怎么选？免费环境、API 与云端运行",
+      "description": "比较比特浏览器与 GoLogin 的 10 对 3 个免费环境、API、云端启动与入门价格，按本地账号管理和远程运行需求选择。"
     },
     {
       "path": "guides/best-free-fingerprint-browsers.md",
-      "title": "免费指纹浏览器有哪些？8 款免费版环境额度、操作次数与限制完整对照",
-      "description": "整理 8 款免费指纹浏览器的环境数、使用期限、操作次数与自动化功能，优先介绍比特浏览器长期免费 10 环境、Local API、RPA 和同步器，并说明个人使用与后续团队扩展方式。"
+      "title": "免费指纹浏览器有哪些？8 款免费版数量与功能对比",
+      "description": "比较 8 款免费指纹浏览器的环境数量、人数、使用期限和操作次数，了解比特免费同步器、RPA、API 与后续团队套餐。"
     }
   ]
 }

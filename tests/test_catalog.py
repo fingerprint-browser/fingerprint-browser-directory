@@ -40,9 +40,22 @@ class CatalogTests(unittest.TestCase):
         ads = next(r for r in rows if r["product_id"] == "adspower" and r["id"] == "free")
         self.assertEqual(ads["conditions"], 'Quoted value: "a,b"; another line\nnext')
         self.assertEqual(ads["api"], "unknown")
-        self.assertEqual(ads["checked_at"], self.data["checked_at"])
+        original_ads = next(p for p in self.data["products"] if p["id"] == "adspower")
+        self.assertEqual(ads["checked_at"], build.get_free(original_ads)["checked_at"])
         exported = json.loads(outputs["data/browser-plans.json"])
         self.assertEqual(len(rows), len(exported["plans"]))
+
+    def test_reader_pages_do_not_publish_internal_notes(self):
+        changed = copy.deepcopy(self.data)
+        changed["products"][0]["sources"][0]["note"] = "INTERNAL_SOURCE_NOTE"
+        free = changed["products"][0]["plans"][0]
+        free["confidence"] = "source_conflict"
+        free["conflict_note"] = "INTERNAL_CONFLICT_NOTE"
+        outputs = build.render_outputs(changed, ROOT)
+        for path, text in outputs.items():
+            if path.endswith(".md"):
+                self.assertNotIn("INTERNAL_SOURCE_NOTE", text)
+                self.assertNotIn("INTERNAL_CONFLICT_NOTE", text)
 
     def test_check_detects_manual_generated_table_edits(self):
         with tempfile.TemporaryDirectory() as folder:

@@ -101,7 +101,7 @@ def profiles(plan: dict) -> str:
         return "按配置选择"
     if plan["intro_profiles"] is not None:
         return f"前 {plan['intro_months']} 个月 {plan['intro_profiles']} 个，之后 {plan['profiles']} 个"
-    suffix = "个混合配置" if plan["profile_scope"] == "cloud_mobile_and_browser" else "个环境"
+    suffix = "个配置" if plan["profile_scope"] == "cloud_mobile_and_browser" else "个环境"
     return f"{plan['profiles']} {suffix}"
 
 
@@ -116,31 +116,6 @@ def price(plan: dict) -> str:
     if plan["price_type"] == "starting":
         text += "起"
     return text
-
-
-def quotas(plan: dict) -> str:
-    values = []
-    if plan["create_limit"] is not None:
-        prefix = "每日" if plan["create_period"] == "day" else "每自然月"
-        values.append(f"{prefix}创建 {plan['create_limit']:,} 个")
-    if plan["open_limit"] is not None:
-        values.append(f"每日打开 {plan['open_limit']:,} 次")
-    if plan["recreation_limit"] is not None:
-        values.append(f"每自然月重建 {plan['recreation_limit']:,} 次")
-    if plan["monthly_additional_create"] is not None:
-        values.append(f"月追加创建/打开 {plan['monthly_additional_create']:,}/{plan['monthly_additional_open']:,} 次")
-    return "；".join(values)
-
-
-def permissions(plan: dict) -> str:
-    included = [name for key, name in [("api", "API"), ("rpa", "RPA"), ("sync", "同步器")] if plan[key] is True]
-    excluded = [name for key, name in [("api", "API"), ("rpa", "RPA"), ("sync", "同步器")] if plan[key] is False]
-    text = []
-    if included:
-        text.append("含 " + "、".join(included))
-    if excluded:
-        text.append("不含 " + "、".join(excluded))
-    return "；".join(text)
 
 
 def resources(plan: dict) -> str:
@@ -167,109 +142,125 @@ def next_review(data: dict, checked_at: str) -> str:
     return (date.fromisoformat(checked_at) + timedelta(days=data["review_after_days"])).isoformat()
 
 
+def readable_users(plan: dict) -> str:
+    label = plan['users_label'].strip()
+    return '' if label in {'未登记', '未公开', '待核对', '—'} else label
+
+
+def short_quota(plan: dict) -> str:
+    if plan['create_period'] == 'day' and plan['open_limit'] is not None:
+        return f"每日新建 {plan['create_limit']:,} 个、打开 {plan['open_limit']:,} 次"
+    if plan['create_period'] == 'calendar_month':
+        return f"每月新建 {plan['create_limit']:,} 次"
+    if plan['open_limit'] is not None:
+        return f"每日打开 {plan['open_limit']:,} 次"
+    if plan['create_limit'] is not None:
+        return f"每日新建 {plan['create_limit']:,} 个"
+    return ''
+
+
+def included_tools(plan: dict) -> str:
+    return '、'.join(name for key, name in [('api','API'),('rpa','RPA'),('sync','同步器')] if plan[key] is True)
+
+
+def free_usage(plan: dict) -> str:
+    if short_quota(plan):
+        return short_quota(plan)
+    if resources(plan):
+        return resources(plan)
+    if plan['intro_months']:
+        return f"第 {plan['intro_months']+1} 个月起保留 {plan['profiles']} 个环境"
+    if included_tools(plan):
+        return '支持 ' + included_tools(plan)
+    if plan['trial_days']:
+        return f"另有 {plan['trial_days']} 天完整功能试用"
+    return '适合少量固定账号'
+
+
+def plan_table(product: dict) -> str:
+    has_users = any(readable_users(p) for p in product['plans'])
+    has_daily = all(p['create_period']=='day' and p['open_limit'] is not None for p in product['plans'])
+    headers = ['套餐','环境数量']
+    if has_users:
+        headers.append('人员')
+    headers.append('价格')
+    if has_daily:
+        headers.append('每日新建 / 打开')
+    rows = []
+    for plan in product['plans']:
+        row = [plan['name'], profiles(plan)]
+        if has_users:
+            row.append(readable_users(plan))
+        row.append(price(plan))
+        if has_daily:
+            row.append(f"{plan['create_limit']:,} / {plan['open_limit']:,} 次")
+        rows.append(row)
+    return table(headers, rows)
+
+
 def render_outputs(data: dict, root: Path) -> dict[str, str]:
     products = ordered_products(data)
-    outputs = {}
-    overview, free_rows, automation = [], [], []
-    records = []
+    outputs, overview, free_rows, records = {}, [], [], []
     for product in products:
         free = get_free(product)
-        featured = next(p for p in product["plans"] if p["id"] == product["featured_plan"])
-        link = f"[{product['name']}]({product['detail_path']})"
-        member_label = free["users_label"] if free["users_label"] != "未登记" else ""
-        free_summary = "；".join(filter(None, [profiles(free), quotas(free), member_label, resources(free)]))
-        if free["trial_days"]:
-            free_summary += f"；另有 {free['trial_days']} 天试用"
-        paid_summary = "中国站 " if featured["site"] == "cn" else ""
-        paid_summary += f"{featured['name']}：{price(featured)}"
-        if product["price_note"]:
-            paid_summary += f"（{product['price_note']}）"
-        if product["id"] == data["preferred_product"]:
-            link = f"**{link}**"
-            paid_summary = f"**{paid_summary}**"
-        overview.append([link, free_summary, paid_summary, product["summary"]])
-        guide_link = f"[{product['name']}](../{product['detail_path']})"
-        free_rows.append([guide_link, profiles(free), quotas(free) or "官方未单列", free["users_label"], permissions(free) or "权限未登记"])
-        labels = {True: "包含", False: "不含", None: "未登记"}
-        automation.append([f"[{product['name']}]({product['detail_path']})", profiles(free), labels[free["api"]], labels[free["rpa"]], labels[free["sync"]]])
-        plan_rows = []
-        for plan in product["plans"]:
-            trial = f"另有 {plan['trial_days']} 天试用" if plan["trial_days"] else ""
-            notes = "；".join(filter(None, [quotas(plan), permissions(plan), resources(plan), trial, plan["conditions"], plan["conflict_note"]])) or "—"
-            site = "中国站" if plan["site"] == "cn" else "国际资料"
-            plan_rows.append([plan["name"], profiles(plan), plan["users_label"], f"{price(plan)}（{site}）", notes])
-            sources = [s for s in product["sources"] if s["id"] in plan["source_ids"]]
-            record = dict(product_id=product["id"], product=product["name"], **plan)
-            record["official_url"] = product["official_url"]
-            record["source_documents"] = "；".join(s["document"] for s in sources)
-            record["next_review_at"] = next_review(data, plan["checked_at"])
+        featured = next(p for p in product['plans'] if p['id']==product['featured_plan'])
+        paid_price = price(featured)
+        if product['price_note']:
+            paid_price += f"（{product['price_note']}）"
+        overview.append([f"[{product['name']}]({product['detail_path']})", profiles(free), paid_price, product['summary']])
+        free_rows.append([f"[{product['name']}](../{product['detail_path']})", profiles(free), readable_users(free), free_usage(free)])
+        member = f"，{readable_users(free)}" if readable_users(free) else ''
+        card = f"> **免费版**：{profiles(free)}{member}\n>\n> **付费起价**：{paid_price}\n>\n> **常用功能**：{product['summary']}"
+        detail = (root/product['detail_path']).read_text(encoding='utf-8')
+        detail = replace_block(detail, 'quick:'+product['id'], card)
+        outputs[product['detail_path']] = replace_block(detail, 'plans:'+product['id'], plan_table(product))
+        for plan in product['plans']:
+            sources = [s for s in product['sources'] if s['id'] in plan['source_ids']]
+            record = dict(product_id=product['id'], product=product['name'], **plan)
+            record['official_url'] = product['official_url']
+            record['source_documents'] = '；'.join(s['document'] for s in sources)
+            record['next_review_at'] = next_review(data,plan['checked_at'])
             records.append(record)
-        detail_path = product["detail_path"]
-        detail = (root / detail_path).read_text(encoding="utf-8")
-        plan_table = table(["套餐", "保存环境数", "成员或员工", "价格与付款周期", "额度与功能说明"], plan_rows)
-        outputs[detail_path] = replace_block(detail, f"plans:{product['id']}", plan_table)
-    outputs["README.md"] = replace_block((root / "README.md").read_text(encoding="utf-8"), "overview", table(["产品详情", "长期免费额度", "付费方案参考（原币种）", "主要功能与特点"], overview))
-    guide = "guides/best-free-fingerprint-browsers.md"
-    outputs[guide] = replace_block((root / guide).read_text(encoding="utf-8"), "free-comparison", table(["产品详情", "免费保存数量", "操作次数", "成员或席位", "免费自动化入口"], free_rows))
-    outputs["FEATURES.md"] = replace_block((root / "FEATURES.md").read_text(encoding="utf-8"), "free-automation", table(["产品详情", "长期免费环境", "API", "RPA", "同步器"], automation))
-    by_id = {product["id"]: product for product in products}
-    bit = by_id["bitbrowser"]
-    bit_free = get_free(bit)
-    bit_paid = next(p for p in bit["plans"] if p["id"] == bit["featured_plan"])
-    for rival_id in ["adspower", "gologin"]:
-        rival = by_id[rival_id]
-        rival_free = get_free(rival)
-        rival_paid = next(p for p in rival["plans"] if p["id"] == rival["featured_plan"])
-        rows = [
-            ["长期免费环境", profiles(bit_free), profiles(rival_free)],
-            ["免费操作额度", quotas(bit_free), quotas(rival_free) or "官方未单列日操作上限"],
-            ["免费成员", bit_free["users_label"], rival_free["users_label"]],
-            ["免费自动化入口", permissions(bit_free), permissions(rival_free) or "按当前套餐核对"],
-        ]
-        path = f"comparisons/bitbrowser-vs-{rival_id}.md"
-        text = (root / path).read_text(encoding="utf-8")
-        if rival_id == "adspower":
-            rows.append(["付费入门", f"中国站 {price(bit_paid)}，{profiles(bit_paid)}、{bit_paid['users_label']}", price(rival_paid)])
-            rows.append(["限时试用", "本文比较长期免费档", f"另有 {rival_free['trial_days']} 天完整功能试用"])
-            text = replace_block(text, "compare:adspower", table(["对比项", "比特浏览器", rival["name"]], rows))
+    outputs['README.md'] = replace_block((root/'README.md').read_text(encoding='utf-8'),'overview',table(['产品详情','长期免费环境','付费起价','常用功能'],overview))
+    guide='guides/best-free-fingerprint-browsers.md'
+    outputs[guide] = replace_block((root/guide).read_text(encoding='utf-8'),'free-comparison',table(['产品详情','免费环境','人数','日常使用'],free_rows))
+    automation=[]
+    use_cases={'api':'用脚本创建、配置和启动环境','rpa':'把固定的网页步骤编排成流程','sync':'同步多个窗口的点击、输入和滚动'}
+    for key,name in [('api','Local API'),('rpa','RPA'),('sync','窗口同步器')]:
+        names=[f"[{p['name']}]({p['detail_path']})" for p in products if get_free(p)[key] is True]
+        if names:
+            automation.append([name,'、'.join(names),use_cases[key]])
+    outputs['FEATURES.md']=replace_block((root/'FEATURES.md').read_text(encoding='utf-8'),'free-automation',table(['免费工具','可用产品','主要用途'],automation))
+    by_id={p['id']:p for p in products}
+    bit=by_id['bitbrowser']; bit_free=get_free(bit)
+    bit_paid=next(p for p in bit['plans'] if p['id']==bit['featured_plan'])
+    for rival_id in ['adspower','gologin']:
+        rival=by_id[rival_id]; free=get_free(rival)
+        paid=next(p for p in rival['plans'] if p['id']==rival['featured_plan'])
+        path=f'comparisons/bitbrowser-vs-{rival_id}.md'
+        text=(root/path).read_text(encoding='utf-8')
+        if rival_id=='adspower':
+            rows=[['长期免费环境',profiles(bit_free),profiles(free)],['免费使用人数',readable_users(bit_free),readable_users(free)],['付费入门',price(bit_paid),price(paid)],['员工或成员',readable_users(bit_paid),readable_users(paid)]]
+            text=replace_block(text,'compare:adspower',table(['对比项','比特浏览器','AdsPower'],rows))
         else:
-            text = replace_block(text, "compare:gologin:free", table(["免费档对比", "比特浏览器", rival["name"]], rows))
-            paid_rows = [
-                ["标价与付款周期", f"中国站 {price(bit_paid)}", price(rival_paid)],
-                ["保存环境", profiles(bit_paid), profiles(rival_paid)],
-                ["成员或员工", bit_paid["users_label"], rival_paid["users_label"]],
-                ["自动化入口", permissions(bit_paid), permissions(rival_paid)],
-                ["其他条件", bit_paid["conditions"], rival_paid["conditions"]],
-            ]
-            text = replace_block(text, "compare:gologin:paid", table(["付费入门档", "比特浏览器 50 窗口档", "GoLogin Professional 10"], paid_rows))
-        outputs[path] = text
-    source_rows = []
-    for product in products:
-        for source in product["sources"]:
-            plans = [p for p in product["plans"] if source["id"] in p["source_ids"]]
-            facts = []
-            for plan in plans:
-                text = f"{plan['name']}：{profiles(plan)}，{price(plan)}，{plan['users_label']}"
-                if quotas(plan):
-                    text += "，" + quotas(plan)
-                if plan["conflict_note"]:
-                    text += "；" + plan["conflict_note"]
-                facts.append(text)
-            entry = f"[官方入口]({source['official_url']}) · {source['document']}"
-            source_rows.append([product["name"], entry, "；".join(facts), source["checked_at"]])
-    outputs["SOURCES.md"] = ("# 产品资料与官方入口\n\n" + table(["产品", "官方资料", "已登记套餐与额度", "资料日期"], source_rows)
-        + f"\n\n建议下次复核：{next_review(data, data['checked_at'])}。\n\n[收录与推广说明](METHODOLOGY.md) · [结构化数据](data/catalog.json) · [套餐 CSV](data/browser-plans.csv) · [返回总览](README.md)\n")
-    outputs["data/browser-plans.json"] = json.dumps(dict(schema_version=data["schema_version"], checked_at=data["checked_at"], plans=records), ensure_ascii=False, indent=2) + "\n"
-    columns = ["product_id", "product", "id", "name", "site", "price_type", "profiles", "profile_scope", "users_count", "users_label", "amount", "currency", "billing_period", "trial_days", "intro_profiles", "intro_months", "create_limit", "create_period", "open_limit", "recreation_limit", "monthly_additional_create", "monthly_additional_open", "api", "rpa", "sync", "proxy_mb_once", "mobile_minutes_once", "mobile_profiles_once", "conditions", "confidence", "conflict_note", "official_url", "source_documents", "checked_at", "next_review_at"]
-    stream = io.StringIO(newline="")
-    writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n", extrasaction="ignore")
-    writer.writeheader()
+            api_label={True:'支持',False:'需付费',None:''}
+            rows=[['长期免费环境',profiles(bit_free),profiles(free)],['使用人数',readable_users(bit_free),readable_users(free)],['操作次数',short_quota(bit_free),short_quota(free)],['免费 API',api_label[bit_free['api']],api_label[free['api']]]]
+            text=replace_block(text,'compare:gologin:free',table(['免费版','比特浏览器','GoLogin'],rows))
+            rows=[['月费',price(bit_paid),price(paid)],['环境数量',profiles(bit_paid),profiles(paid)],['员工或成员',readable_users(bit_paid),readable_users(paid)]]
+            text=replace_block(text,'compare:gologin:paid',table(['入门付费套餐','比特浏览器','GoLogin Professional 10'],rows))
+        outputs[path]=text
+    source_rows=[[p['name'],f"[官网与价格]({p['official_url']})"] for p in products]
+    outputs['SOURCES.md']='# 产品官网与价格入口\n\n'+table(['产品','官方入口'],source_rows)+'\n\n价格与免费额度以各产品官网为准。比特浏览器链接含推广参数。\n\n[返回浏览器对比](README.md)\n'
+    outputs['data/browser-plans.json']=json.dumps(dict(schema_version=data['schema_version'],checked_at=data['checked_at'],plans=records),ensure_ascii=False,indent=2)+'\n'
+    columns=['product_id','product','id','name','site','price_type','profiles','profile_scope','users_count','users_label','amount','currency','billing_period','trial_days','intro_profiles','intro_months','create_limit','create_period','open_limit','recreation_limit','monthly_additional_create','monthly_additional_open','api','rpa','sync','proxy_mb_once','mobile_minutes_once','mobile_profiles_once','conditions','confidence','conflict_note','official_url','source_documents','checked_at','next_review_at']
+    stream=io.StringIO(newline='')
+    writer=csv.DictWriter(stream,fieldnames=columns,lineterminator='\n',extrasaction='ignore');writer.writeheader()
     for record in records:
-        row = {key: record[key] for key in columns}
-        for key in ["api", "rpa", "sync"]:
-            row[key] = {True: "true", False: "false", None: "unknown"}[row[key]]
+        row={key:record[key] for key in columns}
+        for key in ['api','rpa','sync']:
+            row[key]={True:'true',False:'false',None:'unknown'}[row[key]]
         writer.writerow(row)
-    outputs["data/browser-plans.csv"] = stream.getvalue()
+    outputs['data/browser-plans.csv']=stream.getvalue()
     return outputs
 
 
