@@ -45,4 +45,11 @@ GoLogin 的 9 美元新定价适用于 2026 年 1 月起注册的账号。接口
 
 **[查看比特浏览器官网](https://www.bitbrowser.cn/?code=8467b4)** · [比特浏览器详情](../browsers/bitbrowser.md) · [GoLogin 详情](../browsers/gologin.md)
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+
+## 系统与换电脑继续操作
+
+比特提供 Windows 与 macOS 客户端，GoLogin 另外提供 Linux 版本。换电脑继续使用时，要区分环境资料同步与浏览器远程运行：前者把配置带到另一台电脑，后者在云端消耗会话和时长。
+
+先将一个现有环境同步或迁移过去，核对代理和登录状态，再安排其他环境。若更关注保存数量或两人协作，可以继续看[比特 vs ixBrowser](bitbrowser-vs-ixbrowser.md)与[比特 vs MoreLogin](bitbrowser-vs-morelogin.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

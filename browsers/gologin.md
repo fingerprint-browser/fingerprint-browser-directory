@@ -41,4 +41,10 @@ Professional 10 的新定价适用于 2026 年 1 月起注册的账号。该档�
 
 具体价格和功能放在[比特浏览器与 GoLogin 对比](../comparisons/bitbrowser-vs-gologin.md)中；设备支持可查看[安装说明](https://support.gologin.com/en/articles/3452486-supported-platforms-installation)。
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+## 在电脑上安装，还是直接使用云端？
+
+[系统说明](https://support.gologin.com/en/articles/3452486-supported-platforms-installation)列出 Windows、macOS 与 Linux 客户端。客户端打开环境后消耗本机资源；配置云同步用于换设备继续使用，Cloud Launches 才对应远程运行的浏览器会话。
+
+为同事安排工作前，先区分这两类需求，再计算成员、API 和云端时长。已有 AdsPower 流程的团队，可继续阅读[AdsPower vs GoLogin](../comparisons/adspower-vs-gologin.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

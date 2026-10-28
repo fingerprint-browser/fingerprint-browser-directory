@@ -10,4 +10,6 @@
 
 `site`、币种与付款周期用于区分价格记录；`checked_at` 保存资料日期。API、RPA 与同步器权限使用 `true`、`false` 或 `null`，人员字段保留员工与席位的区别。
 
+`profiles` 与 `profile_scope` 一起说明保存的环境及其类型；`runtime_minutes` 是每月运行分钟，`concurrent_profiles` 是浏览器并发。`unlimited` 只用于官方明确不限的资源。没有长期免费版的产品不建立免费套餐记录。
+
 生成和校验方式见[更新说明](../CONTRIBUTING.md)。

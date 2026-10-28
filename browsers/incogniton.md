@@ -41,4 +41,10 @@ Starter Plus 主要提供 10 个环境，适合以手动操作为主的个人用
 
 其他产品的长期免费数量，整理在[免费指纹浏览器对比](../guides/best-free-fingerprint-browsers.md)中。
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+## 体验期结束前，先整理要继续保留的环境
+
+[客户端下载](https://incogniton.com/download-incogniton/)提供 Windows 和 macOS 版本。免费体验期间可以先按项目分组，标出长期需要保留的环境；到第 3 个月再按 3 个长期免费名额或付费方案安排。
+
+有迁移或交接需要时，在原环境中核对 Cookie、代理和浏览器配置，使用所选套餐支持的导出或转移功能。新环境先检查出口和登录状态，再继续日常工作；具体字段可看[指纹检测说明](../guides/how-to-check-browser-fingerprints.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

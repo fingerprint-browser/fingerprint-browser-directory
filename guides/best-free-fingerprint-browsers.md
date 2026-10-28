@@ -1,8 +1,8 @@
-# 免费指纹浏览器有哪些？8 款免费版数量与功能对比
+# 免费指纹浏览器有哪些？10 款免费版数量与功能对比
 
 免费指纹浏览器的差别，除了能保存几个账号环境，还包括使用人数、自动化功能和操作次数。个人管理多个网页账号，比特的 **10 个免费环境、同步器、RPA 和 Local API** 可以覆盖较多起步需求。
 
-下面把 8 款产品的长期免费方案放在一起，方便比较。
+下面把 10 款产品的长期免费方案放在一起，方便比较。
 
 ## 免费版对比表
 
@@ -17,6 +17,8 @@
 | [Incogniton](../browsers/incogniton.md) | 前 2 个月 10 个，之后 3 个 | 1 人 | 第 3 个月起保留 3 个环境 |
 | [Dolphin Anty](../browsers/dolphin-anty.md) | 5 个环境 | 1 人 | 适合少量固定账号 |
 | [Multilogin](../browsers/multilogin.md) | 5 个配置 |  | 一次性 200MB 代理流量；1 个云手机配置赠 30 分钟 |
+| [Hubstudio](../browsers/hubstudio.md) | 保存环境不限 |  | 每日打开 20 次 |
+| [Kameleo](../browsers/kameleo.md) | 本地环境不限；云端 100 个 | 3 名团队成员 | 每月 300 分钟；2 个并发 |
 <!-- END GENERATED:free-comparison -->
 
 ## 免费版有哪些容易忽略的使用限制？
@@ -53,4 +55,15 @@ Multilogin 免费版的 200MB 代理流量，以及 1 个云手机配置的 30 �
 
 **[查看比特浏览器免费版与套餐](https://www.bitbrowser.cn/?code=8467b4)** · [比特浏览器完整介绍](../browsers/bitbrowser.md)
 
-[返回 8 款浏览器对比](../README.md)
+
+## 不限本地环境，也可能按时长使用
+
+Kameleo Free 提供不限数量的本地环境、100 个云端环境、2 个并发和每月 300 分钟运行时间。环境处于打开状态时就会累计分钟，适合开发和短时体验；需要全天持续运行时，要继续比较付费时长与并发。
+
+Hubstudio 免费保存环境不限，每天打开 20 次；Octo Browser 按付费订阅提供环境，没有长期免费档。它们的详情放在[产品目录](../browsers/README.md)中。
+
+## 免费环境配置后怎样检查？
+
+先给一个环境绑定代理、检查出口 IP，再保存账号状态。关闭并重新打开后复查会话；具体操作见[代理配置](how-to-configure-proxy.md)和[指纹检测](how-to-check-browser-fingerprints.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

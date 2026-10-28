@@ -38,6 +38,12 @@ Pro 10 按月为 **11 美元**，按年为 **85 美元一次付清**，折算每
 
 如果主要任务是在 Windows 或 Mac 上管理网页账号，比较环境数量和自动化入口即可。比特免费版提供 10 个环境、同步器、RPA 与 Local API，适合先搭建个人多窗口流程。
 
-Multilogin 则适合同时关注浏览器、云手机和内置代理的用户。可以结合[8 款浏览器对比](../README.md)，按自己常用的设备与任务选择。
+Multilogin 则适合同时关注浏览器、云手机和内置代理的用户。可以结合[11 款浏览器对比](../README.md)，按自己常用的设备与任务选择。
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+## 云同步、云手机和云端浏览器怎样区分？
+
+保存到云端的环境配置，用于在不同设备继续打开原资料；云手机则提供 Android 运行环境。选择前先确定任务是在网页还是 App，再分别计算浏览器配置、移动运行时间与代理流量。
+
+已有自己的代理时，可以按环境保存并检查实际出口，方法见[代理配置指南](../guides/how-to-configure-proxy.md)。需要自己部署浏览器的开发者，也可以比较[开源浏览器](../guides/best-open-source-fingerprint-browsers.md)与 [Kameleo Docker](kameleo.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

@@ -47,4 +47,10 @@ Base 提供 **100 个环境，89 美元/月**；Team 提供 **300 个环境，15
 
 如果主要在本地电脑上管理几十个窗口，软件预算也可以结合[其他浏览器套餐](../README.md)一起比较。
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+## 安装平台与项目分组
+
+[官方下载页](https://dolphin-anty.com/download/)提供 Windows、macOS 与 Linux 版本，Mac 区分 Intel 和 Apple Silicon。Linux 提供 AppImage、deb、rpm 等安装形式。
+
+标签用于标注客户或项目，状态用于区分待配置、日常使用和待交接。把代理与环境名称一起核对，交给同事时更容易找到正确窗口。免费起步与团队扩展的具体差异，可看[比特浏览器 vs Dolphin Anty](../comparisons/bitbrowser-vs-dolphin-anty.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

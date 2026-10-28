@@ -38,4 +38,12 @@ Professional 将每日创建提高到 100 个、打开提高到 1,000 次，并�
 
 工作重点是免费编排 RPA、调用 Local API 或连接 AI 工具的读者，还可以看看[比特浏览器的自动化功能](bitbrowser.md)，比较环境管理之外的操作方式。
 
-[查看 ixBrowser 套餐](https://ixbrowser.com/pricing) · [返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+[查看 ixBrowser 套餐](https://ixbrowser.com/pricing)
+
+## 系统支持与固定环境管理
+
+[下载中心](https://ixbrowser.com/en/download-page)提供 Windows 与 macOS 安装包，Mac 分为 Intel 和 Apple Silicon。环境较多时，可以按项目、客户和使用频率分组，把每天需要操作的环境放到容易找到的位置。
+
+批量导入前先用一个环境确认代理连接和登录状态。保存数量不限的方案，日常仍要安排打开次数；与比特免费版的区别可看[比特 vs ixBrowser](../comparisons/bitbrowser-vs-ixbrowser.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

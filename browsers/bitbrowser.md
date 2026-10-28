@@ -51,4 +51,14 @@
 
 个人管理几组账号，可以从 10 个免费环境开始；需要员工协作时，再考虑 50 窗口套餐。已有 AdsPower 流程或需要比较 GoLogin 云端运行的读者，可以继续看[比特与 AdsPower](../comparisons/bitbrowser-vs-adspower.md)、[比特与 GoLogin](../comparisons/bitbrowser-vs-gologin.md)。
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+## 从一个环境开始配置
+
+先新建一个环境，填入便于辨认的名称和分组；有代理时，在同一环境中保存协议、主机、端口与认证信息。启动后检查出口 IP，再登录需要长期保留的工作账号。下次继续工作时，打开原环境即可沿用它的资料。
+
+操作顺序见[代理配置指南](../guides/how-to-configure-proxy.md)。配置好后可按[检测指南](../guides/how-to-check-browser-fingerprints.md)核对 IP、WebRTC 和浏览器参数。
+
+## 和更多产品放在一起比较
+
+免费数量和日操作次数可看[比特 vs ixBrowser](../comparisons/bitbrowser-vs-ixbrowser.md)；两人协作可看[比特 vs MoreLogin](../comparisons/bitbrowser-vs-morelogin.md)；广告或内容团队的环境分类和人员扩展，可看[比特 vs Dolphin Anty](../comparisons/bitbrowser-vs-dolphin-anty.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

@@ -14,7 +14,7 @@ MoreLogin 的免费版提供 **2 个环境和 2 个用户**，适合两个人共
 
 2 名用户共享 2 个环境。适合一人负责环境和代理配置，另一人参与日常操作；如果两个人各自有多组账号，环境数量增加后就需要升级。
 
-只有自己使用、但需要保留更多账号时，也可以比较[比特浏览器的免费版](bitbrowser.md)，它提供 10 个环境，并包含同步器、RPA 与 Local API。
+
 
 ## 免费的同步器和 API 能做什么？
 
@@ -39,4 +39,10 @@ MoreLogin 同时提供浏览器环境与 Android 云手机。浏览器适合网�
 
 免费版的 2 个环境是桌面浏览器配置。准备使用云手机时，可以在[产品官网](https://www.morelogin.com/)查看对应设备与计费方式。
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+## 安装与首次环境检查
+
+[下载页](https://www.morelogin.com/download)提供 Windows、macOS 和 Linux 入口。安装后先创建一个环境，设置名称、代理和需要的浏览器参数，再在该窗口打开[检测工具](../guides/how-to-check-browser-fingerprints.md)。桌面浏览器环境与 Android 云手机分别管理，选择入口时先确认任务是网页还是 App。
+
+个人环境数与双人协作的具体差别，整理在[比特浏览器 vs MoreLogin](../comparisons/bitbrowser-vs-morelogin.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

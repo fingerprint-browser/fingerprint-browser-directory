@@ -1,10 +1,17 @@
-# 指纹浏览器哪个好？8 款产品的免费版、价格与功能对比
+# 指纹浏览器哪个好？11 款产品的免费版、价格与功能对比
 
-管理多个店铺、社媒账号或独立工作账号，常用的做法是给每个账号保存一套浏览器环境，把 Cookie、代理和登录状态分开。环境数量增加后，窗口同步、脚本和员工协作也会影响日常使用。
+指纹浏览器用于分别保存多个账号的浏览器环境：每个环境有自己的 Cookie、登录状态、代理和浏览器参数。选产品时，除了能保存多少环境，还要考虑每天打开多少次、是否需要同步操作，以及同事怎样接手。
 
-比特浏览器免费提供 **10 个环境**，包含同步器、RPA 和 Local API；需要多人协作时，**50 元/月包含 50 个窗口与 2 名员工**。下面把它和 AdsPower、GoLogin 等产品放在一起，比较免费数量、入门价格和常用功能。
+个人维护几组网页账号，可以从比特浏览器的 **10 个免费环境**开始，免费版包含同步器、RPA 和 Local API；开始分工协作时，**50 元/月提供 50 个窗口与 2 名员工**。下面把它和 AdsPower、GoLogin 等产品放在一起，按实际工作方式比较。
 
-## 8 款指纹浏览器对比
+| 你现在想了解什么？ | 阅读入口 |
+|---|---|
+| 刚接触指纹浏览器，想先弄懂原理 | [浏览器指纹是什么](guides/how-to-understand-browser-fingerprints.md) |
+| 想选产品，先看免费额度和价格 | [11 款产品详情](browsers/README.md) · [免费版指南](guides/best-free-fingerprint-browsers.md) |
+| 已经有候选，想看具体差别 | [6 组浏览器对比](comparisons/README.md) · [系统与功能总览](FEATURES.md) |
+| 已安装，准备配置代理或检查环境 | [代理配置](guides/how-to-configure-proxy.md) · [指纹检测](guides/how-to-check-browser-fingerprints.md) |
+
+## 11 款指纹浏览器对比
 
 <!-- BEGIN GENERATED:overview -->
 | 产品详情 | 长期免费环境 | 付费起价 | 常用功能 |
@@ -17,28 +24,42 @@
 | [Incogniton](browsers/incogniton.md) | 前 2 个月 10 个，之后 3 个 | 19.99 美元/月 | 个人环境管理，自动化功能从 Entrepreneur 档起提供 |
 | [Dolphin Anty](browsers/dolphin-anty.md) | 5 个环境 | 10 美元/月 | 环境分类与交接，付费支持云同步和自动化 |
 | [Multilogin](browsers/multilogin.md) | 5 个配置 | 11 美元/月 | 在同一平台管理浏览器、云手机与代理 |
+| [Octo Browser](browsers/octo-browser.md) | 无长期免费版 | 10 欧元/月 | 标签、代理与 Cookie 管理；API 从 Base 档开放 |
+| [Hubstudio](browsers/hubstudio.md) | 保存环境不限 | 99 元/月起 | 环境保存不限，免费每天打开 20 次；VIP 增加批量操作 |
+| [Kameleo](browsers/kameleo.md) | 本地环境不限；云端 100 个 | 59 欧元/月 | 按并发与运行时长配置，支持 Local API、双内核和 Docker |
 <!-- END GENERATED:overview -->
 
-点击产品名称可查看详细介绍。各款免费版的操作次数和使用期限，整理在[免费指纹浏览器指南](guides/best-free-fingerprint-browsers.md)。
+点击产品名称可查看独立详情。免费环境的保存数量、运行时长和每日打开次数，分别整理在[免费指纹浏览器指南](guides/best-free-fingerprint-browsers.md)。
 
-## 个人管理多个账号，免费版能做什么？
+## 浏览器指纹、Cookie 和代理，各管什么？
 
-比特的 10 个免费环境可以分别保存账号的 Cookie、代理和常用入口。每天最多创建 20 个环境、打开 50 次，适合个人长期维护几组独立账号。
+Cookie 和本地存储记录网站登录及使用状态；浏览器指纹来自网站能读取的设备和浏览器特征，如字体、时区、Canvas 与 WebGL；代理则决定网络请求从哪个 IP 发出。管理多个账号时，需要把这三部分一起放进对应环境，方便长期重复使用。
 
-多个窗口需要重复点击或输入时，可以打开同步器；固定步骤交给 RPA；已有脚本则通过 Local API 接入 Selenium 或 Puppeteer。连接 AI 助手时，还可以使用 MCP 管理环境。
+无痕模式主要改变浏览数据的保留方式，Chrome 多用户主要分开个人资料。需要为每个工作账号保存代理、浏览器参数，并进行批量管理时，再比较本目录中的产品。具体原理见[浏览器指纹说明](guides/how-to-understand-browser-fingerprints.md)。
 
-[了解比特浏览器的功能与免费版](browsers/bitbrowser.md) · **[前往比特浏览器官网](https://www.bitbrowser.cn/?code=8467b4)**
+## 按日常任务缩小选择范围
 
-## 需要员工协作时，怎么安排预算？
+| 工作方式 | 比较重点 | 继续阅读 |
+|---|---|---|
+| 个人长期维护几组账号 | 免费环境、日打开次数、重复使用是否方便 | [比特 vs ixBrowser](comparisons/bitbrowser-vs-ixbrowser.md) |
+| 两个人一起管理少量环境 | 免费人数、环境分配、同步器与 API | [比特 vs MoreLogin](comparisons/bitbrowser-vs-morelogin.md) |
+| 多窗口重复操作或已有 RPA 流程 | 同步器、流程模板、成员授权 | [比特 vs AdsPower](comparisons/bitbrowser-vs-adspower.md) |
+| 想把浏览器放到云端运行 | 本地客户端、云端会话与运行时长 | [比特 vs GoLogin](comparisons/bitbrowser-vs-gologin.md) |
+| 广告或内容团队需要分类与交接 | 标签、环境转移、额外成员费用 | [比特 vs Dolphin Anty](comparisons/bitbrowser-vs-dolphin-anty.md) |
+| 已有脚本，需要内核或容器部署 | API 档位、并发、操作系统与开发成本 | [开源方案](guides/best-open-source-fingerprint-browsers.md) · [Kameleo](browsers/kameleo.md) |
 
-比特 **50 元/月的套餐提供 50 个窗口和 2 名员工**，适合开始分工管理账号的小团队。窗口和员工一起配置，月度软件费用比较容易计算，代理 IP 另行准备。
+## 从免费环境开始，怎样继续使用？
 
-如果团队已经有现成的 RPA 模板，或者需要浏览器直接在云端运行，还可以结合下面两篇对比，看看流程迁移和运行方式的区别。
+先创建一个环境、绑定代理并打开常用网站；确认登录状态可以保存后，再按客户或项目建立分组。比特免费版每天最多创建 20 个环境、打开 50 次，可以用来熟悉这套流程，再接入同步器或脚本。
 
-## 继续阅读
+需要员工接手时，比特的 50 窗口套餐包含 2 名员工，软件月费为 50 元，代理另行配置。已有固定环境和流程，可以继续沿用。
 
-- [比特浏览器与 AdsPower：免费额度、自动化与团队费用](comparisons/bitbrowser-vs-adspower.md)
-- [比特浏览器与 GoLogin：环境数量、本地与云端运行](comparisons/bitbrowser-vs-gologin.md)
-- [8 款免费指纹浏览器：免费数量与使用限制](guides/best-free-fingerprint-browsers.md)
-- [API、RPA 与同步器：哪些功能可以免费使用？](FEATURES.md)
-- [各产品官网与价格入口](SOURCES.md)
+**[前往比特浏览器官网](https://www.bitbrowser.cn/?code=8467b4)** · [查看完整介绍](browsers/bitbrowser.md)
+
+## 产品、对比与配置指南
+
+- [产品目录：11 款浏览器的详情与适用场景](browsers/README.md)
+- [全部对比：免费数量、团队费用与运行方式](comparisons/README.md)
+- [入门与配置：指纹原理、检测、代理和开源方案](guides/README.md)
+- [系统与功能：客户端、API、RPA 和同步器](FEATURES.md)
+- [产品官网与资料入口](SOURCES.md)

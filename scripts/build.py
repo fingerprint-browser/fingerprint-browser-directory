@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 import re
 import sys
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 
@@ -44,8 +44,8 @@ def validate_catalog(data: dict, root: Path) -> None:
         if len(plan_ids) != len(set(plan_ids)) or product["featured_plan"] not in plan_ids:
             raise ValueError(f"Invalid plan IDs for {product['id']}")
         free = [p for p in plans if p["price_type"] == "free"]
-        if len(free) != 1:
-            raise ValueError(f"Expected one long-term free record for {product['id']}")
+        if len(free) > 1:
+            raise ValueError(f"Expected at most one long-term free record for {product['id']}")
         sources = product["sources"]
         source_ids = [s["id"] for s in sources]
         if len(source_ids) != len(set(source_ids)):
@@ -90,8 +90,15 @@ def ordered_products(data: dict) -> list[dict]:
     return sorted(data["products"], key=lambda p: p["id"] != preferred)
 
 
-def get_free(product: dict) -> dict:
-    return next(p for p in product["plans"] if p["price_type"] == "free")
+def get_free(product: dict) -> dict | None:
+    return next((p for p in product["plans"] if p["price_type"] == "free"), None)
+
+
+def free_summary(product: dict) -> str:
+    free = get_free(product)
+    if free is None:
+        return "无长期免费版"
+    return product.get("free_summary") or profiles(free)
 
 
 def profiles(plan: dict) -> str:
@@ -101,7 +108,7 @@ def profiles(plan: dict) -> str:
         return "按配置选择"
     if plan["intro_profiles"] is not None:
         return f"前 {plan['intro_months']} 个月 {plan['intro_profiles']} 个，之后 {plan['profiles']} 个"
-    suffix = "个配置" if plan["profile_scope"] == "cloud_mobile_and_browser" else "个环境"
+    suffix = {"cloud_mobile_and_browser": "个配置", "cloud_browser": "个云端环境"}.get(plan["profile_scope"], "个环境")
     return f"{plan['profiles']} {suffix}"
 
 
@@ -110,7 +117,7 @@ def price(plan: dict) -> str:
         return "免费"
     if plan["price_type"] == "dynamic":
         return "按环境、成员和周期报价"
-    currency = {"CNY": "元", "USD": "美元"}[plan["currency"]]
+    currency = {"CNY": "元", "USD": "美元", "EUR": "欧元"}[plan["currency"]]
     period = {"month": "月", "year": "年"}[plan["billing_period"]]
     text = f"{plan['amount']:g} {currency}/{period}"
     if plan["price_type"] == "starting":
@@ -164,6 +171,8 @@ def included_tools(plan: dict) -> str:
 
 
 def free_usage(plan: dict) -> str:
+    if plan.get('runtime_minutes') is not None:
+        return f"每月 {plan['runtime_minutes']} 分钟；{plan['concurrent_profiles']} 个并发"
     if short_quota(plan):
         return short_quota(plan)
     if resources(plan):
@@ -180,12 +189,15 @@ def free_usage(plan: dict) -> str:
 def plan_table(product: dict) -> str:
     has_users = any(readable_users(p) for p in product['plans'])
     has_daily = all(p['create_period']=='day' and p['open_limit'] is not None for p in product['plans'])
+    has_runtime = any(p.get('runtime_minutes') is not None for p in product['plans'])
     headers = ['套餐','环境数量']
     if has_users:
         headers.append('人员')
     headers.append('价格')
     if has_daily:
         headers.append('每日新建 / 打开')
+    if has_runtime:
+        headers.append('并发 / 运行时长')
     rows = []
     for plan in product['plans']:
         row = [plan['name'], profiles(plan)]
@@ -194,6 +206,10 @@ def plan_table(product: dict) -> str:
         row.append(price(plan))
         if has_daily:
             row.append(f"{plan['create_limit']:,} / {plan['open_limit']:,} 次")
+        if has_runtime:
+            minutes = plan.get('runtime_minutes')
+            label = '时长不限' if minutes == 'unlimited' else f'每月 {minutes} 分钟' if minutes is not None else ''
+            row.append(f"{plan['concurrent_profiles']} 个 / {label}")
         rows.append(row)
     return table(headers, rows)
 
@@ -207,10 +223,11 @@ def render_outputs(data: dict, root: Path) -> dict[str, str]:
         paid_price = price(featured)
         if product['price_note']:
             paid_price += f"（{product['price_note']}）"
-        overview.append([f"[{product['name']}]({product['detail_path']})", profiles(free), paid_price, product['summary']])
-        free_rows.append([f"[{product['name']}](../{product['detail_path']})", profiles(free), readable_users(free), free_usage(free)])
-        member = f"，{readable_users(free)}" if readable_users(free) else ''
-        card = f"> **免费版**：{profiles(free)}{member}\n>\n> **付费起价**：{paid_price}\n>\n> **常用功能**：{product['summary']}"
+        overview.append([f"[{product['name']}]({product['detail_path']})", free_summary(product), paid_price, product['summary']])
+        if free is not None:
+            free_rows.append([f"[{product['name']}](../{product['detail_path']})", free_summary(product), readable_users(free), free_usage(free)])
+        member = f"，{readable_users(free)}" if free and readable_users(free) else ''
+        card = f"> **免费版**：{free_summary(product)}{member}\n>\n> **付费起价**：{paid_price}\n>\n> **常用功能**：{product['summary']}"
         detail = (root/product['detail_path']).read_text(encoding='utf-8')
         detail = replace_block(detail, 'quick:'+product['id'], card)
         outputs[product['detail_path']] = replace_block(detail, 'plans:'+product['id'], plan_table(product))
@@ -222,15 +239,21 @@ def render_outputs(data: dict, root: Path) -> dict[str, str]:
             record['next_review_at'] = next_review(data,plan['checked_at'])
             records.append(record)
     outputs['README.md'] = replace_block((root/'README.md').read_text(encoding='utf-8'),'overview',table(['产品详情','长期免费环境','付费起价','常用功能'],overview))
+    index_rows = [[f"[{p['name']}]({p['detail_path'].split('/')[-1]})", free_summary(p), p['summary']] for p in products]
+    outputs['browsers/README.md'] = replace_block((root/'browsers/README.md').read_text(encoding='utf-8'),'browser-index',table(['产品详情','免费起步','主要用途'],index_rows))
     guide='guides/best-free-fingerprint-browsers.md'
     outputs[guide] = replace_block((root/guide).read_text(encoding='utf-8'),'free-comparison',table(['产品详情','免费环境','人数','日常使用'],free_rows))
     automation=[]
     use_cases={'api':'用脚本创建、配置和启动环境','rpa':'把固定的网页步骤编排成流程','sync':'同步多个窗口的点击、输入和滚动'}
     for key,name in [('api','Local API'),('rpa','RPA'),('sync','窗口同步器')]:
-        names=[f"[{p['name']}]({p['detail_path']})" for p in products if get_free(p)[key] is True]
+        names=[f"[{p['name']}]({p['detail_path']})" for p in products if get_free(p) is not None and get_free(p)[key] is True]
         if names:
             automation.append([name,'、'.join(names),use_cases[key]])
-    outputs['FEATURES.md']=replace_block((root/'FEATURES.md').read_text(encoding='utf-8'),'free-automation',table(['免费工具','可用产品','主要用途'],automation))
+    feature_text=replace_block((root/'FEATURES.md').read_text(encoding='utf-8'),'free-automation',table(['免费工具','可用产品','主要用途'],automation))
+    platform_rows = [[f"[{p['name']}]({p['detail_path']})", '；'.join(v for v in p['os_support'].values() if v), p['runtime_mode']] for p in products]
+    feature_text=replace_block(feature_text,'platforms',table(['产品','客户端或服务器入口','运行方式'],platform_rows))
+    engine_rows=[[f"[{p['name']}]({p['detail_path']})",p['engine_summary']] for p in products if p.get('engine_summary')]
+    outputs['FEATURES.md']=replace_block(feature_text,'engines',table(['产品','内核入口'],engine_rows))
     by_id={p['id']:p for p in products}
     bit=by_id['bitbrowser']; bit_free=get_free(bit)
     bit_paid=next(p for p in bit['plans'] if p['id']==bit['featured_plan'])
@@ -249,10 +272,29 @@ def render_outputs(data: dict, root: Path) -> dict[str, str]:
             rows=[['月费',price(bit_paid),price(paid)],['环境数量',profiles(bit_paid),profiles(paid)],['员工或成员',readable_users(bit_paid),readable_users(paid)]]
             text=replace_block(text,'compare:gologin:paid',table(['入门付费套餐','比特浏览器','GoLogin Professional 10'],rows))
         outputs[path]=text
+    for rival_id in ['ixbrowser','morelogin','dolphin-anty']:
+        rival=by_id[rival_id]; free=get_free(rival)
+        paid=next(p for p in rival['plans'] if p['id']==rival['featured_plan'])
+        rows=[['长期免费环境',free_summary(bit),free_summary(rival)]]
+        if rival_id=='ixbrowser':
+            rows.append(['每日新建 / 打开',f"{bit_free['create_limit']} / {bit_free['open_limit']} 次",f"{free['create_limit']} / {free['open_limit']} 次"])
+        else:
+            rows.append(['免费使用人数',readable_users(bit_free),readable_users(free)])
+            rows.append(['免费 API','支持','支持' if free['api'] else '需付费'])
+        rows.extend([['付费起步',price(bit_paid),price(paid)],['付费环境',profiles(bit_paid),profiles(paid)],['员工或成员',readable_users(bit_paid),readable_users(paid)]])
+        path=f'comparisons/bitbrowser-vs-{rival_id}.md'
+        outputs[path]=replace_block((root/path).read_text(encoding='utf-8'),'compare:'+rival_id,table(['对比项','比特浏览器',rival['name']],rows))
+    ads,go=by_id['adspower'],by_id['gologin']
+    af,gf=get_free(ads),get_free(go)
+    ap=next(p for p in ads['plans'] if p['id']==ads['featured_plan'])
+    gp=next(p for p in go['plans'] if p['id']==go['featured_plan'])
+    path='comparisons/adspower-vs-gologin.md'
+    rows=[['长期免费环境',profiles(af),profiles(gf)],['免费使用人数',readable_users(af),readable_users(gf)],['付费入门',price(ap),price(gp)],['付费成员',readable_users(ap),readable_users(gp)]]
+    outputs[path]=replace_block((root/path).read_text(encoding='utf-8'),'compare:ads-go',table(['对比项','AdsPower','GoLogin'],rows))
     source_rows=[[p['name'],f"[官网与价格]({p['official_url']})"] for p in products]
     outputs['SOURCES.md']='# 产品官网与价格入口\n\n'+table(['产品','官方入口'],source_rows)+'\n\n价格与免费额度以各产品官网为准。比特浏览器链接含推广参数。\n\n[返回浏览器对比](README.md)\n'
     outputs['data/browser-plans.json']=json.dumps(dict(schema_version=data['schema_version'],checked_at=data['checked_at'],plans=records),ensure_ascii=False,indent=2)+'\n'
-    columns=['product_id','product','id','name','site','price_type','profiles','profile_scope','users_count','users_label','amount','currency','billing_period','trial_days','intro_profiles','intro_months','create_limit','create_period','open_limit','recreation_limit','monthly_additional_create','monthly_additional_open','api','rpa','sync','proxy_mb_once','mobile_minutes_once','mobile_profiles_once','conditions','confidence','conflict_note','official_url','source_documents','checked_at','next_review_at']
+    columns=['product_id','product','id','name','site','price_type','profiles','profile_scope','users_count','users_label','amount','currency','billing_period','trial_days','intro_profiles','intro_months','create_limit','create_period','open_limit','recreation_limit','monthly_additional_create','monthly_additional_open','runtime_minutes','concurrent_profiles','api','rpa','sync','proxy_mb_once','mobile_minutes_once','mobile_profiles_once','conditions','confidence','conflict_note','official_url','source_documents','checked_at','next_review_at']
     stream=io.StringIO(newline='')
     writer=csv.DictWriter(stream,fieldnames=columns,lineterminator='\n',extrasaction='ignore');writer.writeheader()
     for record in records:
@@ -264,18 +306,61 @@ def render_outputs(data: dict, root: Path) -> dict[str, str]:
     return outputs
 
 
+def markdown_links(text: str) -> list[str]:
+    text = re.sub(r"^```[^\n]*\n.*?^```\s*$", "", text, flags=re.M | re.S)
+    return re.findall(r"\[[^\]]+\]\(([^)]+)\)", text)
+
+
+def heading_anchors(text: str) -> set[str]:
+    text = re.sub(r"^```[^\n]*\n.*?^```\s*$", "", text, flags=re.M | re.S)
+    counts, anchors = {}, set()
+    for heading in re.findall(r"^#{1,6}\s+(.+?)\s*#*\s*$", text, flags=re.M):
+        heading = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", heading)
+        heading = re.sub(r"<[^>]+>", "", heading).lower()
+        slug = ''.join(c for c in heading if c.isalnum() or c.isspace() or c in {'_', '-'})
+        slug = re.sub(r"\s", "-", slug)
+        count = counts.get(slug, 0)
+        anchors.add(slug if count == 0 else f'{slug}-{count}')
+        counts[slug] = count + 1
+    anchors.update(re.findall(r'<a\s+(?:id|name)=[\"\']([^\"\']+)', text))
+    return anchors
+
+
 def validate_links(root: Path) -> None:
+    graph = {}
     for path in root.rglob("*.md"):
-        for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
-            if target.startswith(("http://", "https://", "mailto:", "#")):
+        graph[path.resolve()] = set()
+        for target in markdown_links(path.read_text(encoding="utf-8")):
+            if target.startswith(("http://", "https://", "mailto:")):
                 if target.startswith(("http://", "https://")):
                     host = urlparse(target).hostname or ""
                     if (host.endswith(".bitbrowser.cn") or host.endswith(".bitbrowser.net") or host in {"bitbrowser.cn", "bitbrowser.net"}) and target != REFERRAL:
                         raise ValueError(f"Unexpected BitBrowser link in {path.relative_to(root)}")
                 continue
-            resolved = (path.parent / target.split("#", 1)[0]).resolve()
+            parts = urlparse(target)
+            resolved = (path.parent / unquote(parts.path)).resolve() if parts.path else path.resolve()
             if not resolved.is_relative_to(root.resolve()) or not resolved.is_file():
                 raise ValueError(f"Broken internal link: {path.relative_to(root)} -> {target}")
+            if parts.fragment and resolved.suffix == '.md':
+                if unquote(parts.fragment) not in heading_anchors(resolved.read_text(encoding='utf-8')):
+                    raise ValueError(f"Broken heading anchor: {path.relative_to(root)} -> {target}")
+            if resolved.suffix == '.md':
+                graph[path.resolve()].add(resolved)
+    home = (root/'README.md').resolve()
+    if home not in graph:
+        return
+    reached, pending = set(), [home]
+    while pending:
+        current = pending.pop()
+        if current not in reached:
+            reached.add(current)
+            pending.extend(graph.get(current, set()) - reached)
+    readers = {(root/'FEATURES.md').resolve()} & set(graph)
+    for folder in ['browsers', 'comparisons', 'guides']:
+        readers.update(p.resolve() for p in (root/folder).glob('*.md'))
+    missing = sorted(str(p.relative_to(root.resolve())) for p in readers - reached)
+    if missing:
+        raise ValueError('Reader pages not reachable from README: ' + ', '.join(missing))
 
 
 def main() -> int:

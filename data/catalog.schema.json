@@ -74,7 +74,9 @@
         "conditions",
         "proxy_mb_once",
         "mobile_minutes_once",
-        "mobile_profiles_once"
+        "mobile_profiles_once",
+        "runtime_minutes",
+        "concurrent_profiles"
       ],
       "properties": {
         "id": {
@@ -110,6 +112,7 @@
           "enum": [
             "CNY",
             "USD",
+            "EUR",
             null
           ]
         },
@@ -137,7 +140,8 @@
         "profile_scope": {
           "enum": [
             "browser",
-            "cloud_mobile_and_browser"
+            "cloud_mobile_and_browser",
+            "cloud_browser"
           ]
         },
         "users_count": {
@@ -277,6 +281,27 @@
             "null"
           ],
           "minimum": 0
+        },
+        "runtime_minutes": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "enum": [
+                "unlimited",
+                null
+              ]
+            }
+          ]
+        },
+        "concurrent_profiles": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
         }
       }
     },
@@ -331,7 +356,8 @@
         "sources",
         "plans",
         "os_support",
-        "price_note"
+        "price_note",
+        "runtime_mode"
       ],
       "properties": {
         "id": {
@@ -401,6 +427,18 @@
         },
         "price_note": {
           "type": "string"
+        },
+        "free_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime_mode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "engine_summary": {
+          "type": "string",
+          "minLength": 1
         }
       }
     }

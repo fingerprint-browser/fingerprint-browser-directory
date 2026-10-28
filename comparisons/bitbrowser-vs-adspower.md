@@ -37,4 +37,13 @@ AdsPower 可以由管理员管理 API 密钥，并向不同成员开放调用权
 
 **[查看比特浏览器官网](https://www.bitbrowser.cn/?code=8467b4)** · [比特浏览器详情](../browsers/bitbrowser.md) · [AdsPower 详情](../browsers/adspower.md)
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+
+## 电脑系统与配置交接
+
+比特支持 Windows 与 macOS；AdsPower 另外提供 Ubuntu Desktop 安装包。已有 Linux 工作机时，先从安装平台筛选；在 Windows 或 Mac 上，则继续比较环境数、流程和员工费用。
+
+交接环境时，把原环境名称、代理和需要保留的 Cookie 对应好。RPA 模板、API 密钥与环境资料分别安排，再在目标环境中检查出口与登录状态。步骤可参考[代理配置](../guides/how-to-configure-proxy.md)和[环境检测](../guides/how-to-check-browser-fingerprints.md)。
+
+如果主要在 AdsPower 与 GoLogin 之间选择，继续看[两款产品的对比](adspower-vs-gologin.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

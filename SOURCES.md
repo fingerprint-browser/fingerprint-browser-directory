@@ -10,6 +10,9 @@
 | Incogniton | [官网与价格](https://incogniton.com/pricing/) |
 | Dolphin Anty | [官网与价格](https://dolphin-anty.com/tarifs/) |
 | Multilogin | [官网与价格](https://multilogin.com/pricing/) |
+| Octo Browser | [官网与价格](https://octobrowser.net/) |
+| Hubstudio | [官网与价格](https://www.hubstudio.cn/pricing/index.html) |
+| Kameleo | [官网与价格](https://kameleo.io/pricing) |
 
 价格与免费额度以各产品官网为准。比特浏览器链接含推广参数。
 

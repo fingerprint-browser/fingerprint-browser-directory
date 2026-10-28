@@ -14,7 +14,7 @@ AdsPower 的长期免费版适合个人管理少量固定环境，7 天完整功
 
 长期免费版提供 **2 个环境，限单人使用**。如果一直只维护这两组账号，可以继续留在免费版；环境更多或需要同事分别登录协作，就需要配置付费方案。
 
-7 天完整功能试用适合集中体验 RPA 和团队功能。试用结束后，长期免费的环境数量仍是 2 个。需要长期免费保留更多环境，可以查看[比特浏览器的 10 个免费环境](bitbrowser.md)。
+7 天完整功能试用适合集中体验 RPA 和团队功能。试用结束后，长期免费的环境数量仍是 2 个。
 
 ## 套餐与价格
 
@@ -39,4 +39,12 @@ AdsPower 的 [RPA](https://help.adspower.com/docs/rpa)支持页面点击、输�
 
 预算中除了窗口数量，也要计入实际需要独立登录的成员数。个人希望直接免费使用同步器、RPA 和 API，则可以继续阅读[比特浏览器与 AdsPower 对比](../comparisons/bitbrowser-vs-adspower.md)。
 
-[返回浏览器对比](../README.md) · [免费版指南](../guides/best-free-fingerprint-browsers.md)
+## 先选对客户端，再安排环境分组
+
+官方[下载页](https://www.adspower.com/download)提供 Windows、macOS 与 Ubuntu Desktop 版本。Windows 为 10 及以上，macOS 为 11 及以上，Ubuntu Desktop 为 22.04 及以上；Mac 要按 Intel 或 Apple Silicon 选择安装包。
+
+团队可以按客户或项目整理环境分组，把浏览器配置、代理和操作流程对应起来。已经有模板的团队，交接时同时确认模板、环境和成员授权。
+
+需要比较 RPA 与云端会话，可继续看[AdsPower vs GoLogin](../comparisons/adspower-vs-gologin.md)。代理和环境的实际检查方法见[配置指南](../guides/how-to-configure-proxy.md)。
+
+[首页](../README.md) · [产品目录](../browsers/README.md) · [全部对比](../comparisons/README.md) · [入门与配置](../guides/README.md)

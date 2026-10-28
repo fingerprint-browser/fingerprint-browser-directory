@@ -64,7 +64,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "cn-50",
@@ -99,7 +101,9 @@
           "conditions": "代理 IP 另行配置",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
@@ -107,7 +111,9 @@
         "macos": "macOS 12+，Intel / Apple Silicon",
         "linux": null
       },
-      "price_note": ""
+      "price_note": "",
+      "runtime_mode": "本地环境；同步器、RPA 与 Local API",
+      "engine_summary": "Google 系、Firefox 系"
     },
     {
       "id": "adspower",
@@ -123,6 +129,14 @@
           "document": "官方 Pricing 页面",
           "official_url": "https://www.adspower.com/pricing",
           "checked_at": "2026-10-27",
+          "note": ""
+        },
+        {
+          "id": "ads-install",
+          "site": "international",
+          "document": "下载与系统要求",
+          "official_url": "https://www.adspower.com/download",
+          "checked_at": "2026-10-28",
           "note": ""
         }
       ],
@@ -160,7 +174,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "professional",
@@ -195,15 +211,19 @@
           "conditions": "按环境数量、额外成员和付款周期配置报价",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
-        "windows": null,
-        "macos": null,
-        "linux": null
+        "windows": "Windows 10+",
+        "macos": "macOS 11+",
+        "linux": "Ubuntu Desktop 22.04+"
       },
-      "price_note": ""
+      "price_note": "",
+      "runtime_mode": "本地环境；RPA 模板与成员授权",
+      "engine_summary": "SunBrowser（Chrome 系）、FlowerBrowser（Firefox 系）"
     },
     {
       "id": "gologin",
@@ -219,6 +239,14 @@
           "document": "套餐帮助 Pricing",
           "official_url": "https://support.gologin.com/en/articles/14617029-pricing",
           "checked_at": "2026-10-27",
+          "note": ""
+        },
+        {
+          "id": "go-install",
+          "site": "international",
+          "document": "支持平台与安装",
+          "official_url": "https://support.gologin.com/en/articles/3452486-supported-platforms-installation",
+          "checked_at": "2026-10-28",
           "note": ""
         }
       ],
@@ -256,7 +284,9 @@
           "conditions": "删除环境不返还当月创建次数",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "professional-10",
@@ -291,15 +321,18 @@
           "conditions": "新价格适用于 2026 年 1 月起注册账号；API 300 RPM，1 个并发云端会话、100 小时总使用量",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
-        "windows": null,
-        "macos": null,
-        "linux": null
+        "windows": "Windows 10 / 11",
+        "macos": "macOS 12+",
+        "linux": "Ubuntu / Mint"
       },
-      "price_note": "新定价账号"
+      "price_note": "新定价账号",
+      "runtime_mode": "本地客户端；另有付费 Cloud Launches"
     },
     {
       "id": "morelogin",
@@ -315,6 +348,14 @@
           "document": "官方 Pricing 与功能表",
           "official_url": "https://www.morelogin.com/pricing",
           "checked_at": "2026-10-27",
+          "note": ""
+        },
+        {
+          "id": "more-install",
+          "site": "international",
+          "document": "下载中心",
+          "official_url": "https://www.morelogin.com/download",
+          "checked_at": "2026-10-28",
           "note": ""
         }
       ],
@@ -352,7 +393,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "pro-10",
@@ -387,15 +430,19 @@
           "conditions": "用户数量影响总价；长周期付款另有折扣",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
-        "windows": null,
-        "macos": null,
-        "linux": null
+        "windows": "Windows",
+        "macos": "macOS",
+        "linux": "Linux 桌面与服务器入口"
       },
-      "price_note": ""
+      "price_note": "",
+      "runtime_mode": "本地浏览器环境；另有 Android 云手机",
+      "engine_summary": "Chrome 系、Firefox 系"
     },
     {
       "id": "ixbrowser",
@@ -411,6 +458,14 @@
           "document": "官方 Pricing 表格",
           "official_url": "https://ixbrowser.com/pricing",
           "checked_at": "2026-10-27",
+          "note": ""
+        },
+        {
+          "id": "ix-install",
+          "site": "international",
+          "document": "下载中心",
+          "official_url": "https://ixbrowser.com/en/download-page",
+          "checked_at": "2026-10-28",
           "note": ""
         }
       ],
@@ -448,7 +503,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "professional",
@@ -483,7 +540,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "business",
@@ -518,7 +577,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "enterprise",
@@ -553,7 +614,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "basic-developer",
@@ -588,15 +651,18 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
-        "windows": null,
-        "macos": null,
+        "windows": "Windows",
+        "macos": "macOS，Intel / Apple Silicon",
         "linux": null
       },
-      "price_note": ""
+      "price_note": "",
+      "runtime_mode": "本地客户端；按日操作次数管理"
     },
     {
       "id": "incogniton",
@@ -612,6 +678,14 @@
           "document": "官方 Pricing、功能表与 FAQ",
           "official_url": "https://incogniton.com/pricing/",
           "checked_at": "2026-10-27",
+          "note": ""
+        },
+        {
+          "id": "inc-install",
+          "site": "international",
+          "document": "客户端下载",
+          "official_url": "https://incogniton.com/download-incogniton/",
+          "checked_at": "2026-10-28",
           "note": ""
         }
       ],
@@ -649,7 +723,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "starter-plus",
@@ -684,7 +760,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "entrepreneur",
@@ -719,7 +797,9 @@
           "conditions": "包含 Selenium/Puppeteer、Cookie 导出与环境转移",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "professional",
@@ -754,15 +834,18 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
-        "windows": null,
-        "macos": null,
+        "windows": "Windows",
+        "macos": "macOS",
         "linux": null
       },
-      "price_note": ""
+      "price_note": "",
+      "runtime_mode": "本地客户端；自动化从 Entrepreneur 档起"
     },
     {
       "id": "dolphin-anty",
@@ -785,6 +868,14 @@
           "site": "international",
           "document": "官方 Tarifs 价格页",
           "official_url": "https://dolphin-anty.com/tarifs/",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "dol-install",
+          "site": "international",
+          "document": "客户端下载",
+          "official_url": "https://dolphin-anty.com/download/",
           "checked_at": "2026-10-28",
           "note": ""
         }
@@ -823,7 +914,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "starter-20",
@@ -859,7 +952,9 @@
           "conditions": "云同步与 Cookie 导出",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "base",
@@ -895,7 +990,9 @@
           "conditions": "每个额外用户 10 美元",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "team",
@@ -931,15 +1028,18 @@
           "conditions": "每个额外用户 20 美元",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
-        "windows": null,
-        "macos": null,
-        "linux": null
+        "windows": "Windows",
+        "macos": "macOS，Intel / Apple Silicon",
+        "linux": "Linux，AppImage / deb / rpm"
       },
-      "price_note": ""
+      "price_note": "",
+      "runtime_mode": "本地客户端；付费云同步与自动化"
     },
     {
       "id": "multilogin",
@@ -992,7 +1092,9 @@
           "conditions": "",
           "proxy_mb_once": 200,
           "mobile_minutes_once": 30,
-          "mobile_profiles_once": 1
+          "mobile_profiles_once": 1,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "pro-10-month",
@@ -1027,7 +1129,9 @@
           "conditions": "",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         },
         {
           "id": "pro-10-year",
@@ -1062,7 +1166,9 @@
           "conditions": "85 美元一次付清，月均约 7.08 美元",
           "proxy_mb_once": null,
           "mobile_minutes_once": null,
-          "mobile_profiles_once": null
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
         }
       ],
       "os_support": {
@@ -1070,7 +1176,390 @@
         "macos": "macOS 14+",
         "linux": "Ubuntu 22+"
       },
-      "price_note": ""
+      "price_note": "",
+      "runtime_mode": "桌面浏览器与云手机分别使用"
+    },
+    {
+      "id": "octo-browser",
+      "name": "Octo Browser",
+      "detail_path": "browsers/octo-browser.md",
+      "official_url": "https://octobrowser.net/",
+      "featured_plan": "lite",
+      "summary": "标签、代理与 Cookie 管理；API 从 Base 档开放",
+      "price_note": "",
+      "os_support": {
+        "windows": "Windows 10 / 11",
+        "macos": "macOS 13+",
+        "linux": "Ubuntu 22.04+ 等发行版"
+      },
+      "sources": [
+        {
+          "id": "octo-plans",
+          "site": "international",
+          "document": "订阅档位与资源",
+          "official_url": "https://docs.octobrowser.net/en/payments/subscriptions/",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "octo-billing",
+          "site": "international",
+          "document": "账户余额与代币",
+          "official_url": "https://docs.octobrowser.net/en/start/account-settings/",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "octo-api",
+          "site": "international",
+          "document": "API 与调用限额",
+          "official_url": "https://docs.octobrowser.net/en/api/start-api/",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "octo-install",
+          "site": "international",
+          "document": "系统要求",
+          "official_url": "https://docs.octobrowser.net/en/start/system-requirements/",
+          "checked_at": "2026-10-28",
+          "note": ""
+        }
+      ],
+      "plans": [
+        {
+          "id": "lite",
+          "name": "Lite",
+          "profiles": 3,
+          "amount": 10,
+          "currency": "EUR",
+          "billing_period": "month",
+          "price_type": "fixed",
+          "site": "international",
+          "profile_scope": "browser",
+          "users_count": 1,
+          "users_label": "1 人",
+          "create_limit": null,
+          "create_period": null,
+          "open_limit": null,
+          "recreation_limit": null,
+          "monthly_additional_create": null,
+          "monthly_additional_open": null,
+          "intro_profiles": null,
+          "intro_months": null,
+          "trial_days": null,
+          "api": false,
+          "rpa": null,
+          "sync": null,
+          "source_ids": [
+            "octo-plans",
+            "octo-billing"
+          ],
+          "checked_at": "2026-10-28",
+          "confidence": "verified",
+          "conflict_note": "",
+          "conditions": "10 tokens / 30 天；充值时 1 token = 1 欧元；不含额外团队成员。",
+          "proxy_mb_once": null,
+          "mobile_minutes_once": null,
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "profiles": 100,
+          "amount": 79,
+          "currency": "EUR",
+          "billing_period": "month",
+          "price_type": "fixed",
+          "site": "international",
+          "profile_scope": "browser",
+          "users_count": 1,
+          "users_label": "1 人",
+          "create_limit": null,
+          "create_period": null,
+          "open_limit": null,
+          "recreation_limit": null,
+          "monthly_additional_create": null,
+          "monthly_additional_open": null,
+          "intro_profiles": null,
+          "intro_months": null,
+          "trial_days": null,
+          "api": true,
+          "rpa": null,
+          "sync": null,
+          "source_ids": [
+            "octo-plans",
+            "octo-billing",
+            "octo-api"
+          ],
+          "checked_at": "2026-10-28",
+          "confidence": "verified",
+          "conflict_note": "",
+          "conditions": "79 tokens / 30 天；API 50 RPM、500 RPH；100 为基础环境数，额外环境另购。",
+          "proxy_mb_once": null,
+          "mobile_minutes_once": null,
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
+        }
+      ],
+      "runtime_mode": "本地客户端；API 从 Base 档开放"
+    },
+    {
+      "id": "hubstudio",
+      "name": "Hubstudio",
+      "detail_path": "browsers/hubstudio.md",
+      "official_url": "https://www.hubstudio.cn/pricing/index.html",
+      "featured_plan": "vip",
+      "summary": "环境保存不限，免费每天打开 20 次；VIP 增加批量操作",
+      "price_note": "",
+      "os_support": {
+        "windows": "Windows",
+        "macos": "macOS，Intel / Apple Silicon",
+        "linux": "CLI 与无头客户端（服务器）"
+      },
+      "sources": [
+        {
+          "id": "hub-price",
+          "site": "cn",
+          "document": "价格与套餐功能",
+          "official_url": "https://www.hubstudio.cn/pricing/index.html",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "hub-mac",
+          "site": "cn",
+          "document": "Mac 版功能说明",
+          "official_url": "https://support-orig.hubstudio.cn/7794/a06d",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "hub-start",
+          "site": "cn",
+          "document": "客户端下载与启动",
+          "official_url": "https://support-orig.hubstudio.cn/373a/0bfa",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "hub-cli",
+          "site": "cn",
+          "document": "开发文档：CLI 与 Linux Server 指南",
+          "official_url": "https://api-docs.hubstudio.cn/",
+          "checked_at": "2026-10-28",
+          "note": ""
+        }
+      ],
+      "plans": [
+        {
+          "id": "free",
+          "name": "免费版",
+          "profiles": "unlimited",
+          "amount": 0,
+          "currency": null,
+          "billing_period": "free",
+          "price_type": "free",
+          "site": "cn",
+          "profile_scope": "browser",
+          "users_count": null,
+          "users_label": "",
+          "create_limit": null,
+          "create_period": null,
+          "open_limit": 20,
+          "recreation_limit": null,
+          "monthly_additional_create": null,
+          "monthly_additional_open": null,
+          "intro_profiles": null,
+          "intro_months": null,
+          "trial_days": null,
+          "api": false,
+          "rpa": null,
+          "sync": false,
+          "source_ids": [
+            "hub-price"
+          ],
+          "checked_at": "2026-10-28",
+          "confidence": "verified",
+          "conflict_note": "",
+          "conditions": "成员数与云存储为限免权益，价格页未给出固定数量。",
+          "proxy_mb_once": null,
+          "mobile_minutes_once": null,
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
+        },
+        {
+          "id": "vip",
+          "name": "VIP",
+          "profiles": "unlimited",
+          "amount": 99,
+          "currency": "CNY",
+          "billing_period": "month",
+          "price_type": "starting",
+          "site": "cn",
+          "profile_scope": "browser",
+          "users_count": null,
+          "users_label": "",
+          "create_limit": null,
+          "create_period": null,
+          "open_limit": null,
+          "recreation_limit": null,
+          "monthly_additional_create": null,
+          "monthly_additional_open": null,
+          "intro_profiles": null,
+          "intro_months": null,
+          "trial_days": null,
+          "api": true,
+          "rpa": null,
+          "sync": true,
+          "source_ids": [
+            "hub-price"
+          ],
+          "checked_at": "2026-10-28",
+          "confidence": "verified",
+          "conflict_note": "",
+          "conditions": "每日打开额度按所选档位为 500～2,000 次；窗口同步的系统差异见 Mac 版帮助。",
+          "proxy_mb_once": null,
+          "mobile_minutes_once": null,
+          "mobile_profiles_once": null,
+          "runtime_minutes": null,
+          "concurrent_profiles": null
+        }
+      ],
+      "runtime_mode": "桌面客户端；服务器另有 CLI 与无头模式"
+    },
+    {
+      "id": "kameleo",
+      "name": "Kameleo",
+      "detail_path": "browsers/kameleo.md",
+      "official_url": "https://kameleo.io/pricing",
+      "featured_plan": "startup",
+      "summary": "按并发与运行时长配置，支持 Local API、双内核和 Docker",
+      "price_note": "",
+      "free_summary": "本地环境不限；云端 100 个",
+      "os_support": {
+        "windows": "Windows 客户端 / Docker",
+        "macos": "macOS 客户端",
+        "linux": "Linux Docker"
+      },
+      "sources": [
+        {
+          "id": "kam-price",
+          "site": "international",
+          "document": "套餐、运行时长与功能",
+          "official_url": "https://kameleo.io/pricing",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "kam-plans",
+          "site": "international",
+          "document": "套餐详细说明",
+          "official_url": "https://help.kameleo.io/article/51-subscription-plans-overview",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "kam-install",
+          "site": "international",
+          "document": "客户端安装",
+          "official_url": "https://help.kameleo.io/article/46-kameleo-installation-guide",
+          "checked_at": "2026-10-28",
+          "note": ""
+        },
+        {
+          "id": "kam-docker",
+          "site": "international",
+          "document": "Linux 与 Windows 容器",
+          "official_url": "https://kameleo.io/docker",
+          "checked_at": "2026-10-28",
+          "note": ""
+        }
+      ],
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "profiles": 100,
+          "amount": 0,
+          "currency": null,
+          "billing_period": "free",
+          "price_type": "free",
+          "site": "international",
+          "profile_scope": "cloud_browser",
+          "users_count": 3,
+          "users_label": "3 名团队成员",
+          "create_limit": null,
+          "create_period": null,
+          "open_limit": null,
+          "recreation_limit": null,
+          "monthly_additional_create": null,
+          "monthly_additional_open": null,
+          "intro_profiles": null,
+          "intro_months": null,
+          "trial_days": null,
+          "api": true,
+          "rpa": null,
+          "sync": null,
+          "source_ids": [
+            "kam-price",
+            "kam-plans"
+          ],
+          "checked_at": "2026-10-28",
+          "confidence": "verified",
+          "conflict_note": "",
+          "conditions": "本地环境不限；100 个云端环境；每月 300 分钟按已启动环境累计，包括空闲时间。",
+          "proxy_mb_once": null,
+          "mobile_minutes_once": null,
+          "mobile_profiles_once": null,
+          "runtime_minutes": 300,
+          "concurrent_profiles": 2
+        },
+        {
+          "id": "startup",
+          "name": "Startup",
+          "profiles": 5000,
+          "amount": 59,
+          "currency": "EUR",
+          "billing_period": "month",
+          "price_type": "fixed",
+          "site": "international",
+          "profile_scope": "cloud_browser",
+          "users_count": null,
+          "users_label": "团队成员不限",
+          "create_limit": null,
+          "create_period": null,
+          "open_limit": null,
+          "recreation_limit": null,
+          "monthly_additional_create": null,
+          "monthly_additional_open": null,
+          "intro_profiles": null,
+          "intro_months": null,
+          "trial_days": null,
+          "api": true,
+          "rpa": null,
+          "sync": null,
+          "source_ids": [
+            "kam-price",
+            "kam-plans"
+          ],
+          "checked_at": "2026-10-28",
+          "confidence": "verified",
+          "conflict_note": "",
+          "conditions": "本地环境不限；运行时长不限；额外并发另购。",
+          "proxy_mb_once": null,
+          "mobile_minutes_once": null,
+          "mobile_profiles_once": null,
+          "runtime_minutes": "unlimited",
+          "concurrent_profiles": 10
+        }
+      ],
+      "runtime_mode": "桌面客户端；Linux / Windows Docker",
+      "engine_summary": "Chroma（Chrome 系）、Junglefox（Firefox 系）"
     }
   ]
 }
